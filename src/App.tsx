@@ -1,7 +1,5 @@
 function App() {
-  return (
-    <div>app</div>
-  )
+  return <div onClick={() => console.log('a')}>app</div>;
 }
 
-export default App
+export default App;
