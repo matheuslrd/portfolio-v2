@@ -1,7 +1,8 @@
 import 'normalize.css';
+import Routes from './Routes';
 
 function App() {
-  return <div onClick={() => console.log('a')}>app</div>;
+  return <Routes />;
 }
 
 export default App;
