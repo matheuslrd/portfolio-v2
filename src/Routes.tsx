@@ -1,23 +1,15 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from 'src/pages/Home';
-import AboutMe from './pages/AboutMe';
-import Skills from './pages/Skills';
+import { Routes, Route } from 'react-router-dom';
+import Home from '@pages/Home';
+import AboutMe from '@pages/AboutMe';
+import Skills from '@pages/Skills';
 
-export default function Routes() {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <Home />,
-    },
-    {
-      path: '/about-me',
-      element: <AboutMe />,
-    },
-    {
-      path: '/skills',
-      element: <Skills />,
-    },
-  ]);
-
-  return <RouterProvider router={router} />;
+export default function Router() {
+  return (
+    <Routes>
+      <Route index element={<Home />} />
+      <Route path="about-me" element={<AboutMe />} />
+      <Route path="skills" element={<Skills />} />
+      <Route path="*" element={<div>Não encontrado</div>} />
+    </Routes>
+  );
 }
