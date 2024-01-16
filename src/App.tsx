@@ -6,8 +6,7 @@ import 'aos/dist/aos.css';
 import HomePage from '@pages/Home';
 import AboutMe from '@pages/AboutMe';
 import Projects from '@pages/Projects';
-// import Projects from './Pages/Projects/index';
-// import Services from './Pages/Services/index';
+import Services from '@pages/Services';
 // import Skills from './Pages/Skills/index';
 // import Footer from './Components/Footer';
 
@@ -29,7 +28,7 @@ function App() {
         <HomePage />
         <AboutMe />
         <Projects />
-        {/* <Services /> */}
+        <Services />
         {/* <Skills /> */}
         {/* <Footer /> */}
       </StyledApp>
