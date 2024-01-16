@@ -7,8 +7,8 @@ import HomePage from '@pages/Home';
 import AboutMe from '@pages/AboutMe';
 import Projects from '@pages/Projects';
 import Services from '@pages/Services';
-// import Skills from './Pages/Skills/index';
-// import Footer from './Components/Footer';
+import Skills from '@pages/Skills';
+import Footer from '@components/Footer';
 
 import StyledApp from '@styles/app';
 
@@ -29,8 +29,8 @@ function App() {
         <AboutMe />
         <Projects />
         <Services />
-        {/* <Skills /> */}
-        {/* <Footer /> */}
+        <Skills />
+        <Footer />
       </StyledApp>
     </ThemeProvider>
   );
