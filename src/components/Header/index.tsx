@@ -1,17 +1,16 @@
 import { Link } from 'react-router-dom';
+import { HeaderWrapper } from './Header.style';
 
 export default function Header() {
   return (
-    <header>
-      <Link to="/">
-        <button>Home</button>
-      </Link>
-      <Link to="/about-me">
-        <button>AboutMe</button>
-      </Link>
-      <Link to="/skills">
-        <button>Skills</button>
-      </Link>
-    </header>
+    <HeaderWrapper>
+      <div>logo</div>
+      <nav>
+        <div>switch</div>
+        <Link to="/">Home</Link>
+        <Link to="/about-me">AboutMe</Link>
+        <Link to="/skills">Skills</Link>
+      </nav>
+    </HeaderWrapper>
   );
 }
