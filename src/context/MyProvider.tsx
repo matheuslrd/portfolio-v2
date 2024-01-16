@@ -13,7 +13,7 @@ function GlobalProvider({ children }: { children: React.ReactNode }) {
   }
 
   function setOrCreateThemeStorage() {
-    const themeStorage = JSON.parse(localStorage.getItem('theme') || '');
+    const themeStorage = JSON.parse(localStorage.getItem('theme') || 'false');
 
     if (!themeStorage) return createThemeLocalStorage();
 
