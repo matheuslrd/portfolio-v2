@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import HomePage from '@pages/Home';
-// import AboutMe from './Pages/AboutMe/index';
+import AboutMe from '@pages/AboutMe';
 // import Projects from './Pages/Projects/index';
 // import Services from './Pages/Services/index';
 // import Skills from './Pages/Skills/index';
@@ -26,11 +26,11 @@ function App() {
       <StyledApp>
         <GlobalStyle />
         <HomePage />
-        {/* <AboutMe />
-        <Projects />
-        <Services />
-        <Skills />
-        <Footer /> */}
+        <AboutMe />
+        {/* <Projects /> */}
+        {/* <Services /> */}
+        {/* <Skills /> */}
+        {/* <Footer /> */}
       </StyledApp>
     </ThemeProvider>
   );
