@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { ThemeProvider } from 'styled-components';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import HomePage from '@pages/Home';
 import AboutMe from '@pages/AboutMe';
+import Projects from '@pages/Projects';
 // import Projects from './Pages/Projects/index';
 // import Services from './Pages/Services/index';
 // import Skills from './Pages/Skills/index';
@@ -27,7 +28,7 @@ function App() {
         <GlobalStyle />
         <HomePage />
         <AboutMe />
-        {/* <Projects /> */}
+        <Projects />
         {/* <Services /> */}
         {/* <Skills /> */}
         {/* <Footer /> */}
