@@ -20,7 +20,7 @@ const AboutMe = styled.div`
   }
 
   .Avatar-Matheus-Img {
-    border: 3px solid #5d2de2;
+    border: 0.187rem solid #5d2de2;
     border-radius: 50%;
     width: 40%;
   }

@@ -12,8 +12,8 @@ const HomePage = styled.div`
 
   #luxbar {
     background: ${(props) => props.theme.color.secundary};
-    -webkit-box-shadow: 0px -6px 10px 8px rgba(0, 0, 0, 0.43);
-    box-shadow: 0px -6px 10px 8px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 -0.375rem 0.625rem 0.5rem rgba(0, 0, 0, 0.43);
+    box-shadow: 0 -0.375rem 0.625rem 0.5rem rgba(0, 0, 0, 0.15);
     position: fixed;
     top: 0;
     transition: 0.25s all ease-out;
@@ -22,7 +22,7 @@ const HomePage = styled.div`
   }
 
   .luxbar-menu {
-    transition: 0.25s all ease-out !important;
+    transition: 0.25s all ease-out;
   }
 
   .luxbar-menu-dark {
@@ -31,8 +31,8 @@ const HomePage = styled.div`
     padding: 0 2rem;
   }
 
-  .luxbar-hamburger span::before,
-  .luxbar-hamburger span::after {
+  .luxbar-hamburger span:before,
+  .luxbar-hamburger span:after {
     background: ${(props) => props.theme.color.text};
   }
 
@@ -52,7 +52,7 @@ const HomePage = styled.div`
   }
 
   .Title-Name {
-    font-family: 'Merienda', cursive;
+    font-family: Merienda, cursive;
     font-size: 1.2em;
   }
 
@@ -76,6 +76,13 @@ const HomePage = styled.div`
     flex: 53;
   }
 
+  .buttons-contact {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.312rem;
+    margin-top: 1rem;
+  }
+
   .summary-about-me {
     font-size: 1.5em;
   }
@@ -84,27 +91,11 @@ const HomePage = styled.div`
     font-weight: 500;
   }
 
-  .buttons-contact {
-    padding-top: 0.3rem;
-
-    .btn-github {
-      margin-left: 0.4em;
-    }
-  }
-
   .Main-Content .illustration-dev-container {
     align-items: center;
     display: flex;
     justify-content: center;
     flex: 47;
-  }
-
-  .buttons-contact {
-    padding-top: 1rem;
-
-    .btn-github {
-      margin-left: 0.4em;
-    }
   }
 
   .illustration-dev {
@@ -125,10 +116,10 @@ const HomePage = styled.div`
 
   .arrow span {
     display: block;
-    width: 15px;
-    height: 15px;
-    border-bottom: 3px solid #5d2de2;
-    border-right: 3px solid #5d2de2;
+    width: 0.937rem;
+    height: 0.937rem;
+    border-bottom: 0.187rem solid #5d2de2;
+    border-right: 0.187rem solid #5d2de2;
     transform: rotate(45deg);
     animation: animate 2s infinite;
   }
@@ -144,14 +135,14 @@ const HomePage = styled.div`
   @keyframes animate {
     0% {
       opacity: 0;
-      transform: rotate(45deg) translate(-20px, -20px);
+      transform: rotate(45deg) translate(-1.25rem, -1.25rem);
     }
     50% {
       opacity: 1;
     }
     100% {
       opacity: 0;
-      transform: rotate(45deg) translate(20px, 20px);
+      transform: rotate(45deg) translate(1.25rem, 1.25rem);
     }
   }
 
@@ -187,19 +178,6 @@ const HomePage = styled.div`
 
       .summary-container {
         margin-top: 5em;
-      }
-    }
-
-    .buttons-contact {
-      display: flex;
-      flex-flow: column nowrap;
-
-      .btn-contact {
-        width: 100%;
-      }
-
-      .btn-github {
-        margin-left: 0;
       }
     }
 

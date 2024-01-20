@@ -3,6 +3,8 @@ import styled from 'styled-components';
 const App = styled.div`
   background: ${(props) => props.theme.color.primary};
   transition: 0.25s all ease-out;
+  font-weight: 500;
+  color: #fdfdfd;
   width: 100%;
 
   a {

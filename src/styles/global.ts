@@ -17,7 +17,6 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
     min-height: 100%;
     background: #fff;
-    color: #555;
   }
 
   body, input, textarea {
