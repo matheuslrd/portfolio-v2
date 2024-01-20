@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  * {
+  /* * {
     border: 0;
     box-sizing: border-box;
     list-style: none;
@@ -38,6 +38,23 @@ const GlobalStyle = createGlobalStyle`
     html {
       font-size: 14px;
     }
+  } */
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    outline: 0;
+  }
+  
+  body {
+    color: ${(props) => props.theme.color.text};
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    min-width: 300px;
+    overflow-x: hidden;
   }
 `;
 
