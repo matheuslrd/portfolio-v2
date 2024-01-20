@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  /* * {
+  * {
     border: 0;
     box-sizing: border-box;
     list-style: none;
@@ -38,9 +38,9 @@ const GlobalStyle = createGlobalStyle`
     html {
       font-size: 14px;
     }
-  } */
+  }
 
-  * {
+  /* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     min-width: 300px;
     overflow-x: hidden;
-  }
+  } */
 `;
 
 export default GlobalStyle;
