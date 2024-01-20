@@ -20,7 +20,7 @@ const Footer = styled.div`
   .Icons-Footer {
     display: flex;
     justify-content: space-around;
-    margin-right: 4em;
+    margin-right: 4rem;
     width: 30%;
   }
 
@@ -35,7 +35,7 @@ const Footer = styled.div`
   .Back-To-Home {
     background: #4622aa;
     border: 2px solid #4622aa;
-    border-radius: 0.2em;
+    border-radius: 0.2rem;
     cursor: pointer;
     color: #fdfdfd;
     transition: 0.1s all ease-out;

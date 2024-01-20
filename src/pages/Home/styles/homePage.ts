@@ -53,12 +53,12 @@ const HomePage = styled.div`
 
   .Title-Name {
     font-family: Merienda, cursive;
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 
   .Light-Theme-Icon {
-    margin-left: 0.3em;
-    margin-top: 0.1em;
+    margin-left: 0.3rem;
+    margin-top: 0.1rem;
   }
 
   /* CONTEÚDO PRINCIPAL */
@@ -84,7 +84,7 @@ const HomePage = styled.div`
   }
 
   .summary-about-me {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   .Student-Web {
@@ -103,8 +103,8 @@ const HomePage = styled.div`
   }
 
   .Scrool-Text {
-    margin-bottom: 0.5em;
-    margin-top: -1em;
+    margin-bottom: 0.5rem;
+    margin-top: -1rem;
   }
 
   .arrow {
@@ -177,12 +177,12 @@ const HomePage = styled.div`
       width: 80%;
 
       .summary-container {
-        margin-top: 5em;
+        margin-top: 5rem;
       }
     }
 
     .btn-contact {
-      margin-top: 1em;
+      margin-top: 1rem;
       width: 100%;
     }
 
@@ -191,7 +191,7 @@ const HomePage = styled.div`
     }
 
     .Btn-Contact {
-      height: 3em;
+      height: 3rem;
     }
   }
 `;

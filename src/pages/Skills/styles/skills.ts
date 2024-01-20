@@ -18,14 +18,14 @@ const Skills = styled.div`
   }
 
   .Abstract-Skills {
-    line-height: 1.5em;
-    padding-right: 4em;
+    line-height: 1.5rem;
+    padding-right: 4rem;
     width: 50%;
   }
 
   .Skills-Title {
-    margin-bottom: 1em;
-    font-size: 1.8em;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
     font-weight: 500;
   }
 
@@ -37,7 +37,7 @@ const Skills = styled.div`
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin: 2em;
+    margin: 2rem;
     width: 50%;
   }
 
@@ -45,21 +45,21 @@ const Skills = styled.div`
     align-items: center;
     background: ${(props) => props.theme.color.secundary};
     border: 0.25rem solid ${(props) => props.theme.color.secundary};
-    border-radius: 0.3em;
+    border-radius: 0.3rem;
     box-shadow: 0.125rem 0.125rem 0.312rem rgba(0, 0, 0, 0.2);
     color: #5429cf;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    padding: 1.4em 0.9em;
-    margin: 0.5em;
-    height: 7em;
+    padding: 1.4em 0.9rem;
+    margin: 0.5rem;
+    height: 7rem;
     width: 20%;
   }
 
   .Text-Skill {
     display: none;
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
     font-weight: 500;
   }
 
@@ -71,8 +71,8 @@ const Skills = styled.div`
     .Skills-Container {
       display: flex;
       flex-flow: column nowrap;
-      font-size: 0.95em;
-      padding: 1em;
+      font-size: 0.95rem;
+      padding: 1rem;
       width: 98%;
     }
 
@@ -83,17 +83,17 @@ const Skills = styled.div`
 
     .Skills-Title {
       text-align: center;
-      margin: 0.8em;
+      margin: 0.8rem;
     }
 
     .Icons-Skills {
-      margin: 3em;
+      margin: 3rem;
       width: 100%;
     }
 
     .Skill-Card {
-      font-size: 0.9em;
-      height: 7em;
+      font-size: 0.9rem;
+      height: 7rem;
       width: 20%;
     }
   }
