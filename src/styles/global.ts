@@ -16,10 +16,8 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     height: auto;
     min-height: 100%;
-    overflow-x: hidden;
     background: #fff;
     color: #555;
-    overflow: hidden;
   }
 
   body, input, textarea {
@@ -29,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   *, a, button, div {
 
     &:focus-visible {
-      outline: 3px solid #cdd5f2;
+      outline: 0.187rem solid #cdd5f2;
     }
   }
 
