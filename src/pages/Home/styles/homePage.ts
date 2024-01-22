@@ -5,50 +5,75 @@ const HomePage = styled.div`
 
   #Home-Page {
     height: 100vh;
-    padding-top: 8%;
+    padding-top: 3.625rem;
     transition: 0.25s all ease-out;
     width: 100%;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    span {
+      display: block;
+      width: 0.937rem;
+      height: 0.937rem;
+      border-bottom: 0.187rem solid #5d2de2;
+      border-right: 0.187rem solid #5d2de2;
+      transform: rotate(45deg);
+      animation: animate 2s infinite;
+    }
+
+    span:nth-child(2) {
+      animation-delay: -0.2s;
+    }
+
+    span:nth-child(3) {
+      animation-delay: -0.4s;
+    }
   }
 
   #luxbar {
     background: ${(props) => props.theme.color.secundary};
-    -webkit-box-shadow: 0 -0.375rem 0.625rem 0.5rem rgba(0, 0, 0, 0.43);
     box-shadow: 0 -0.375rem 0.625rem 0.5rem rgba(0, 0, 0, 0.15);
     position: fixed;
     top: 0;
     transition: 0.25s all ease-out;
+    height: 3.625rem;
     width: 100%;
     z-index: 100;
-  }
 
-  .luxbar-menu {
-    transition: 0.25s all ease-out;
-  }
+    .luxbar-menu {
+      transition: 0.25s all ease-out;
+    }
 
-  .luxbar-menu-dark {
-    background: ${(props) => props.theme.color.secundary};
-    color: ${(props) => props.theme.color.text};
-    padding: 0 2rem;
-  }
+    .luxbar-menu-dark {
+      background: ${(props) => props.theme.color.secundary};
+      color: ${(props) => props.theme.color.text};
+      padding: 0 2rem;
+    }
 
-  .luxbar-hamburger span:before,
-  .luxbar-hamburger span:after {
-    background: ${(props) => props.theme.color.text};
-  }
+    .luxbar-hamburger span:before,
+    .luxbar-hamburger span:after {
+      background: ${(props) => props.theme.color.text};
+    }
 
-  .luxbar-hamburger span {
-    background: ${(props) => props.theme.color.text};
-  }
+    .luxbar-hamburger span {
+      background: ${(props) => props.theme.color.text};
+    }
 
-  .luxbar-item {
-    align-items: center;
-    display: flex;
-  }
+    .luxbar-item {
+      align-items: center;
+      display: flex;
+    }
 
-  .luxbar-item:hover {
-    background: none;
-    color: #5d2de2;
-    transition: 0.25s all ease-out;
+    .luxbar-item:hover {
+      background: none;
+      color: #5d2de2;
+      transition: 0.25s all ease-out;
+    }
   }
 
   .Title-Name {
@@ -107,39 +132,16 @@ const HomePage = styled.div`
     margin-top: -1rem;
   }
 
-  .arrow {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .arrow span {
-    display: block;
-    width: 0.937rem;
-    height: 0.937rem;
-    border-bottom: 0.187rem solid #5d2de2;
-    border-right: 0.187rem solid #5d2de2;
-    transform: rotate(45deg);
-    animation: animate 2s infinite;
-  }
-
-  .arrow span:nth-child(2) {
-    animation-delay: -0.2s;
-  }
-
-  .arrow span:nth-child(3) {
-    animation-delay: -0.4s;
-  }
-
   @keyframes animate {
     0% {
       opacity: 0;
       transform: rotate(45deg) translate(-1.25rem, -1.25rem);
     }
+
     50% {
       opacity: 1;
     }
+
     100% {
       opacity: 0;
       transform: rotate(45deg) translate(1.25rem, 1.25rem);
