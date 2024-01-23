@@ -1,6 +1,7 @@
 import { GlobalContext } from '@context/MyProvider';
 import { IGlobalContext } from '@context/interfaces';
 import { useContext } from 'react';
+import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
 
 // import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
 
@@ -37,12 +38,10 @@ export default function HeaderLuxBar() {
               activeBoxShadow="none"
               checked={theme}
               uncheckedIcon={
-                // <BsFillSunFill color="#fff" size="0.9em" className="Light-Theme-Icon" />
-                <>a</>
+                <BsFillSunFill color="#fff" size="0.9em" className="Light-Theme-Icon" />
               }
               checkedIcon={
-                // <BsFillMoonFill color="#fff" size="0.8em" className="Light-Theme-Icon" />
-                <>a</>
+                <BsFillMoonFill color="#fff" size="0.8em" className="Light-Theme-Icon" />
               }
               className="Switch-Theme"
               handleDiameter={17}

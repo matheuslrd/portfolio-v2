@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  /* * {
+  * {
     border: 0;
     box-sizing: border-box;
     list-style: none;
@@ -16,10 +16,7 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     height: auto;
     min-height: 100%;
-    overflow-x: hidden;
     background: #fff;
-    color: #555;
-    overflow: hidden;
   }
 
   body, input, textarea {
@@ -29,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
   *, a, button, div {
 
     &:focus-visible {
-      outline: 3px solid #cdd5f2;
+      outline: 0.187rem solid #cdd5f2;
     }
   }
 
@@ -38,9 +35,9 @@ const GlobalStyle = createGlobalStyle`
     html {
       font-size: 14px;
     }
-  } */
+  }
 
-  * {
+  /* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -55,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     min-width: 300px;
     overflow-x: hidden;
-  }
+  } */
 `;
 
 export default GlobalStyle;

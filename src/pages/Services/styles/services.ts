@@ -12,29 +12,29 @@ const Services = styled.div`
   }
 
   .Services-Title {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 500;
     text-align: center;
-    margin: 1em;
+    margin: 1rem;
     width: 100%;
   }
 
   .Services-Container-Center {
     display: flex;
-    font-size: 1em;
+    font-size: 1rem;
     flex-flow: row nowrap;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     width: 80%;
   }
 
   .Service {
     background: ${(props) => props.theme.color.primary};
     text-align: center;
-    border-radius: 0.3em;
-    font-size: 0.9em;
-    padding: 1em;
-    margin: 1em;
-    height: 20em;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    padding: 1rem;
+    margin: 1rem;
+    height: 20rem;
     width: 25%;
   }
 
@@ -45,17 +45,17 @@ const Services = styled.div`
   }
 
   .Title-Service {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.8rem;
     font-weight: 400;
   }
 
   .Text-Service {
     font-weight: 600;
-    line-height: 1.5em;
+    line-height: 1.5rem;
   }
 
   #Skills {
-    margin-bottom: 5em;
+    margin-bottom: 5rem;
   }
 
   @media screen and (max-width: 768px) {
@@ -67,20 +67,19 @@ const Services = styled.div`
     }
 
     .Service {
-      font-size: 0.8em;
-      height: 19em;
+      font-size: 0.8rem;
+      height: 19rem;
       width: 40%;
     }
 
     .Icon-Service {
-      padding: 1.5em;
+      padding: 1.5rem;
     }
 
     .Text-Service {
-      line-height: 1.1em;
+      line-height: 1.1rem;
     }
   }
-
 `;
 
 export default Services;

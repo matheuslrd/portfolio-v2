@@ -5,60 +5,86 @@ const HomePage = styled.div`
 
   #Home-Page {
     height: 100vh;
-    padding-top: 8%;
+    padding-top: 3.625rem;
     transition: 0.25s all ease-out;
     width: 100%;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    span {
+      display: block;
+      width: 0.937rem;
+      height: 0.937rem;
+      border-bottom: 0.187rem solid #5d2de2;
+      border-right: 0.187rem solid #5d2de2;
+      transform: rotate(45deg);
+      animation: animate 2s infinite;
+    }
+
+    span:nth-child(2) {
+      animation-delay: -0.2s;
+    }
+
+    span:nth-child(3) {
+      animation-delay: -0.4s;
+    }
   }
 
   #luxbar {
     background: ${(props) => props.theme.color.secundary};
-    -webkit-box-shadow: 0px -6px 10px 8px rgba(0, 0, 0, 0.43);
-    box-shadow: 0px -6px 10px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -0.375rem 0.625rem 0.5rem rgba(0, 0, 0, 0.15);
     position: fixed;
     top: 0;
     transition: 0.25s all ease-out;
+    height: 3.625rem;
     width: 100%;
     z-index: 100;
-  }
 
-  .luxbar-menu {
-    transition: 0.25s all ease-out !important;
-  }
+    .luxbar-menu {
+      transition: 0.25s all ease-out;
+    }
 
-  .luxbar-menu-dark {
-    background: ${(props) => props.theme.color.secundary};
-    color: ${(props) => props.theme.color.text};
-    padding: 0 2rem;
-  }
+    .luxbar-menu-dark {
+      overflow-y: hidden;
+      background: ${(props) => props.theme.color.secundary};
+      color: ${(props) => props.theme.color.text};
+      padding: 0 2rem;
+    }
 
-  .luxbar-hamburger span::before,
-  .luxbar-hamburger span::after {
-    background: ${(props) => props.theme.color.text};
-  }
+    .luxbar-hamburger span:before,
+    .luxbar-hamburger span:after {
+      background: ${(props) => props.theme.color.text};
+    }
 
-  .luxbar-hamburger span {
-    background: ${(props) => props.theme.color.text};
-  }
+    .luxbar-hamburger span {
+      background: ${(props) => props.theme.color.text};
+    }
 
-  .luxbar-item {
-    align-items: center;
-    display: flex;
-  }
+    .luxbar-item {
+      align-items: center;
+      display: flex;
+    }
 
-  .luxbar-item:hover {
-    background: none;
-    color: #5d2de2;
-    transition: 0.25s all ease-out;
+    .luxbar-item:hover {
+      background: none;
+      color: #5d2de2;
+      transition: 0.25s all ease-out;
+    }
   }
 
   .Title-Name {
-    font-family: 'Merienda', cursive;
-    font-size: 1.2em;
+    font-family: Merienda, cursive;
+    font-size: 1.2rem;
   }
 
   .Light-Theme-Icon {
-    margin-left: 0.3em;
-    margin-top: 0.1em;
+    margin-left: 0.3rem;
+    margin-top: 0.1rem;
   }
 
   /* CONTEÚDO PRINCIPAL */
@@ -76,20 +102,19 @@ const HomePage = styled.div`
     flex: 53;
   }
 
+  .buttons-contact {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.312rem;
+    margin-top: 1rem;
+  }
+
   .summary-about-me {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   .Student-Web {
     font-weight: 500;
-  }
-
-  .buttons-contact {
-    padding-top: 0.3rem;
-
-    .btn-github {
-      margin-left: 0.4em;
-    }
   }
 
   .Main-Content .illustration-dev-container {
@@ -99,59 +124,28 @@ const HomePage = styled.div`
     flex: 47;
   }
 
-  .buttons-contact {
-    padding-top: 1rem;
-
-    .btn-github {
-      margin-left: 0.4em;
-    }
-  }
-
   .illustration-dev {
     width: 70%;
   }
 
   .Scrool-Text {
-    margin-bottom: 0.5em;
-    margin-top: -1em;
-  }
-
-  .arrow {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .arrow span {
-    display: block;
-    width: 15px;
-    height: 15px;
-    border-bottom: 3px solid #5d2de2;
-    border-right: 3px solid #5d2de2;
-    transform: rotate(45deg);
-    animation: animate 2s infinite;
-  }
-
-  .arrow span:nth-child(2) {
-    animation-delay: -0.2s;
-  }
-
-  .arrow span:nth-child(3) {
-    animation-delay: -0.4s;
+    margin-bottom: 0.5rem;
+    margin-top: -1rem;
   }
 
   @keyframes animate {
     0% {
       opacity: 0;
-      transform: rotate(45deg) translate(-20px, -20px);
+      transform: rotate(45deg) translate(-1.25rem, -1.25rem);
     }
+
     50% {
       opacity: 1;
     }
+
     100% {
       opacity: 0;
-      transform: rotate(45deg) translate(20px, 20px);
+      transform: rotate(45deg) translate(1.25rem, 1.25rem);
     }
   }
 
@@ -186,25 +180,12 @@ const HomePage = styled.div`
       width: 80%;
 
       .summary-container {
-        margin-top: 5em;
-      }
-    }
-
-    .buttons-contact {
-      display: flex;
-      flex-flow: column nowrap;
-
-      .btn-contact {
-        width: 100%;
-      }
-
-      .btn-github {
-        margin-left: 0;
+        margin-top: 5rem;
       }
     }
 
     .btn-contact {
-      margin-top: 1em;
+      margin-top: 1rem;
       width: 100%;
     }
 
@@ -213,7 +194,7 @@ const HomePage = styled.div`
     }
 
     .Btn-Contact {
-      height: 3em;
+      height: 3rem;
     }
   }
 `;

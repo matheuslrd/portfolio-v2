@@ -2,6 +2,7 @@ import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
 import { BiUpArrowAlt } from 'react-icons/bi';
 
 import StyledFooter from './Footer';
+import BackToTheTop from '@components/BackToTheTop';
 
 function Footer() {
   return (
@@ -29,11 +30,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="Icon-Back-To-Home">
-          <a href="#Home-Page">
-            <BiUpArrowAlt className="Back-To-Home" size="2.5em" />
-          </a>
-        </div>
+        <BackToTheTop />
       </footer>
     </StyledFooter>
   );

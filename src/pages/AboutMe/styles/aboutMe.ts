@@ -20,7 +20,7 @@ const AboutMe = styled.div`
   }
 
   .Avatar-Matheus-Img {
-    border: 3px solid #5d2de2;
+    border: 0.187rem solid #5d2de2;
     border-radius: 50%;
     width: 40%;
   }
@@ -51,12 +51,12 @@ const AboutMe = styled.div`
 
     p {
       font-weight: 400;
-      line-height: 1.5em;
+      line-height: 1.5rem;
     }
   }
 
   .btn-contact {
-    margin-top: 3em;
+    margin-top: 3rem;
     padding: 2em 0;
     width: 30%;
   }
@@ -75,7 +75,7 @@ const AboutMe = styled.div`
     }
 
     .Avatar-Matheus-Img {
-      width: 10em;
+      width: 10rem;
     }
 
     .Icons {

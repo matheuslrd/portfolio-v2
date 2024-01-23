@@ -10,10 +10,10 @@ const Projects = styled.div`
   }
 
   .Title-Projects {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 500;
     text-align: center;
-    padding: 2em 0 1em;
+    padding: 2em 0 1rem;
     width: 100%;
   }
 
@@ -27,22 +27,24 @@ const Projects = styled.div`
   .Project {
     text-align: start;
     background: ${(props) => props.theme.color.secundary};
-    margin: 1em;
-    padding: 2em 1.5em;
-    font-size: 0.9em;
-    border-radius: 0.3em;
-    min-height: 15em;
+    margin: 1rem;
+    padding: 2em 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    min-height: 15rem;
     width: 30%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 
     .project-info-container {
-      margin-bottom: 2em;
+      margin-bottom: 2rem;
     }
   }
 
   .Title-Project {
-    font-weight: 400;
-    margin-bottom: 0.5em;
-    height: 17%;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
     width: 100%;
   }
 
@@ -55,12 +57,9 @@ const Projects = styled.div`
   .Buttons-Project {
     display: flex;
     justify-content: space-between;
-    height: 25%;
     width: 100%;
 
     .btn-contact {
-      font-size: 0.8em;
-      height: 2.8em;
       width: 45%;
     }
   }
@@ -74,12 +73,12 @@ const Projects = styled.div`
   }
 
   .Btn-Project-Title {
-    margin-left: 0.3em;
+    margin-left: 0.3rem;
   }
 
   .Repositories-On-GitHub {
     text-align: center;
-    padding: 1.28em;
+    padding: 1.28rem;
     width: 100%;
   }
 
@@ -100,15 +99,15 @@ const Projects = styled.div`
     }
 
     .Title-Projects {
-      padding-bottom: 0.5em;
+      padding-bottom: 0.5rem;
     }
 
     .Project {
-      display: flex;
-      font-size: 0.7em;
+      align-items: center;
+      flex-flow: row nowrap;
+      font-size: 0.7rem;
       min-height: 0;
-      height: 11em;
-      padding: 1.3em;
+      padding: 1.3rem;
       width: 95%;
 
       .project-info-container {
@@ -117,7 +116,7 @@ const Projects = styled.div`
         justify-content: center;
         flex: 6;
         text-align: justify;
-        padding-right: 1em;
+        padding-right: 1rem;
         margin-bottom: 0;
       }
 
@@ -125,18 +124,18 @@ const Projects = styled.div`
         display: flex;
         flex-flow: column nowrap;
         flex: 4;
+        gap: 0.5rem;
         justify-content: space-around;
         height: 100%;
 
         .btn-contact {
-          height: 3.5em;
           width: 100%;
         }
       }
     }
 
     .Abstract-Project {
-      font-size: 0.95em;
+      font-size: 0.95rem;
       height: 45%;
     }
 
@@ -149,11 +148,10 @@ const Projects = styled.div`
     }
 
     .Btn-Project-Links {
-      font-size: 0.9em;
-      height: 2.5em;
+      font-size: 0.9rem;
+      height: 2.5rem;
     }
   }
-
 `;
 
 export default Projects;

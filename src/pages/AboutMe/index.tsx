@@ -2,6 +2,16 @@ import StyledAboutMe from './styles/aboutMe';
 import { FileHtml, FileJs, FileCss, Atom, LinkedinLogo } from '@phosphor-icons/react';
 
 function AboutMe() {
+  const calcAge = (): number => {
+    const myBirth = new Date('2000-12-13');
+    const today = new Date();
+
+    return Math.floor(
+      Math.ceil(Math.abs(myBirth.getTime() - today.getTime()) / (1000 * 3600 * 24)) /
+        365.25,
+    );
+  };
+
   return (
     <StyledAboutMe>
       <section id="About-Me-Page">
@@ -27,7 +37,7 @@ function AboutMe() {
               <h2 className="Title-About-Me">Quem Sou Eu?</h2>
               <br />
               <p className="About-Me-Matheus">
-                Meu nome é Matheus Laurindo, tenho 20 anos e moro em Gravataí/RS.
+                Meu nome é Matheus Laurindo, tenho {calcAge()} anos e moro em Gravataí/RS.
                 <br />
                 Sou apaixonado por filmes, tecnologia e praticar exercícios físicos.
               </p>
