@@ -33,6 +33,9 @@ const Projects = styled.div`
     border-radius: 0.3rem;
     min-height: 15rem;
     width: 30%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 
     .project-info-container {
       margin-bottom: 2rem;
@@ -40,9 +43,8 @@ const Projects = styled.div`
   }
 
   .Title-Project {
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 0.5rem;
-    height: 17%;
     width: 100%;
   }
 
@@ -55,12 +57,9 @@ const Projects = styled.div`
   .Buttons-Project {
     display: flex;
     justify-content: space-between;
-    height: 25%;
     width: 100%;
 
     .btn-contact {
-      font-size: 0.8rem;
-      height: 2.8rem;
       width: 45%;
     }
   }
@@ -104,10 +103,10 @@ const Projects = styled.div`
     }
 
     .Project {
-      display: flex;
+      align-items: center;
+      flex-flow: row nowrap;
       font-size: 0.7rem;
       min-height: 0;
-      height: 11rem;
       padding: 1.3rem;
       width: 95%;
 
@@ -125,11 +124,11 @@ const Projects = styled.div`
         display: flex;
         flex-flow: column nowrap;
         flex: 4;
+        gap: 0.5rem;
         justify-content: space-around;
         height: 100%;
 
         .btn-contact {
-          height: 3.5rem;
           width: 100%;
         }
       }

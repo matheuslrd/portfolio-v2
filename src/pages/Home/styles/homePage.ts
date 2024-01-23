@@ -50,6 +50,7 @@ const HomePage = styled.div`
     }
 
     .luxbar-menu-dark {
+      overflow-y: hidden;
       background: ${(props) => props.theme.color.secundary};
       color: ${(props) => props.theme.color.text};
       padding: 0 2rem;
