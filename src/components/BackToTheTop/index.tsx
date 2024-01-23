@@ -33,7 +33,7 @@ export default function BackToTheTop() {
         spy={true}
         smooth={true}
         offset={-70}
-        duration={6000}
+        duration={6700}
       >
         <BiUpArrowAlt className="Back-To-Home" size="2.5em" />
       </Link>
