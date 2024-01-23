@@ -1,5 +1,4 @@
 import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
-import { BiUpArrowAlt } from 'react-icons/bi';
 
 import StyledFooter from './Footer';
 import BackToTheTop from '@components/BackToTheTop';
