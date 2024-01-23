@@ -4,7 +4,7 @@ const App = styled.div`
   background: ${(props) => props.theme.color.primary};
   transition: 0.25s all ease-out;
   font-weight: 500;
-  color: #fdfdfd;
+  color: ${(props) => props.theme.color.text};
   width: 100%;
 
   a {
