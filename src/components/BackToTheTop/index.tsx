@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 import { BiUpArrowAlt } from 'react-icons/bi';
 import { Events, Link, scrollSpy } from 'react-scroll';
+import elevatorMusicPath from '../../data/elevator-music.mp3';
+import elevatorBellPath from '../../data/elevator-bip2.m4a?url';
 
 export default function BackToTheTop() {
   useEffect(() => {
-    const elevatorMusic = new Audio('/src/data/elevator-music.mp3');
-    const elevatorBip = new Audio('/src/data/elevator-bip2.m4a');
+    const elevatorMusic = new Audio(elevatorMusicPath);
+    const elevatorBip = new Audio(elevatorBellPath);
 
     elevatorBip.volume = 1;
     elevatorMusic.volume = 0.3;
