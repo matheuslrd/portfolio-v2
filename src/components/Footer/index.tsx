@@ -13,17 +13,17 @@ function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              <LinkedinLogo />
+              <LinkedinLogo size="2rem" />
             </a>
             <a href="https://github.com/matheuslrd" target="_blank" rel="noreferrer">
-              <GithubLogo />
+              <GithubLogo size="2rem" />
             </a>
             <a
               href="https://www.instagram.com/matheuslrd_/"
               target="_blank"
               rel="noreferrer"
             >
-              <InstagramLogo color="white" />
+              <InstagramLogo size="2rem" color="white" />
             </a>
           </div>
         </div>

@@ -19,7 +19,6 @@ import { IGlobalContext } from '@context/interfaces';
 
 function App() {
   const { theme } = useContext<IGlobalContext>(GlobalContext);
-  AOS.init();
 
   return (
     <ThemeProvider theme={theme ? darkTheme : lightTheme}>
