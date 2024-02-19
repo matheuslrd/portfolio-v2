@@ -1,7 +1,6 @@
-import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
-
 import StyledFooter from './Footer';
 import BackToTheTop from '@components/BackToTheTop';
+import { GithubLogo, LinkedinLogo, InstagramLogo } from '@phosphor-icons/react';
 
 function Footer() {
   return (
@@ -14,17 +13,17 @@ function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              <FaLinkedinIn className="Icon-Footer" size="1.7em" />
+              <LinkedinLogo />
             </a>
             <a href="https://github.com/matheuslrd" target="_blank" rel="noreferrer">
-              <FaGithub className="Icon-Footer" size="1.7em" />
+              <GithubLogo />
             </a>
             <a
               href="https://www.instagram.com/matheuslrd_/"
               target="_blank"
               rel="noreferrer"
             >
-              <FaInstagram className="Icon-Footer" size="1.7em" />
+              <InstagramLogo color="white" />
             </a>
           </div>
         </div>

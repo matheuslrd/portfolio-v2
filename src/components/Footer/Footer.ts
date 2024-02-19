@@ -22,6 +22,11 @@ const Footer = styled.div`
     justify-content: space-around;
     margin-right: 4rem;
     width: 30%;
+
+    svg {
+      width: 1.562rem;
+      color: white;
+    }
   }
 
   .Icon-Back-To-Home {
