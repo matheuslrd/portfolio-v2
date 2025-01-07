@@ -1,21 +1,32 @@
-import HeaderLuxBar from './components/HeaderLuxBar';
-import devIllustration from '@assets/dev-illustration.svg';
-
-import StyledHomePage from './styles/homePage';
+import { lazy, Suspense } from 'react';
 import { WhatsappLogo, GithubLogo } from '@phosphor-icons/react';
+import devIllustration from '@assets/dev-illustration.svg';
+import StyledHomePage from './styles/homePage';
+
+const HeaderLuxBar = lazy(() => import('./components/HeaderLuxBar'));
 
 function HomePage() {
   return (
     <StyledHomePage>
       <section id="Home-Page">
-        <HeaderLuxBar />
+        <Suspense fallback={<div>Loading...</div>}>
+          <HeaderLuxBar />
+        </Suspense>
         <main className="Main-Content">
           <section className="Contacte-Me-Container" data-aos="zoom-in">
             <div className="summary-container">
-              <div className="summary-about-me">
-                Olá, eu sou
+              {/* Componente prioritário para LCP */}
+              <div 
+                className="summary-about-me"
+                style={{ 
+                  display: 'block',
+                  contentVisibility: 'auto',
+                  containIntrinsicSize: '0 500px'
+                }}
+              >
+                <span>Olá, eu sou</span>
                 <br />
-                <h2>Matheus Laurindo</h2>
+                <h1>Matheus Laurindo</h1>
                 <span className="Student-Web">Estudante de Desenvolvimento Web.</span>
               </div>
 
@@ -24,6 +35,7 @@ function HomePage() {
                   className="btn-contact"
                   href="https://wa.me/+5551984108411?text=Ol%C3%A1,%20Matheus"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <WhatsappLogo size={28} />
                   whatsapp
@@ -33,6 +45,7 @@ function HomePage() {
                   className="btn-contact btn-github"
                   href="https://github.com/matheuslrd"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <GithubLogo size={28} />
                   GitHub
@@ -41,11 +54,26 @@ function HomePage() {
             </div>
           </section>
 
-          <section className="illustration-dev-container" data-aos="zoom-in">
+          <section 
+            className="illustration-dev-container" 
+            data-aos="zoom-in"
+            style={{ 
+              contentVisibility: 'auto',
+              containIntrinsicSize: '0 500px'
+            }}
+          >
             <img
               className="illustration-dev"
               src={devIllustration}
-              alt="dev-illustration"
+              alt="Ilustração de um desenvolvedor programando"
+              loading="lazy"
+              decoding="async"
+              width="500"
+              height="500"
+              style={{
+                aspectRatio: '1/1',
+                objectFit: 'contain'
+              }}
             />
           </section>
         </main>
