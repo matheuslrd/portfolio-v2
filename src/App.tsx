@@ -1,8 +1,5 @@
 import { useContext } from 'react';
 import { ThemeProvider } from 'styled-components';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 import HomePage from '@pages/Home';
 import AboutMe from '@pages/AboutMe';
 import Projects from '@pages/Projects';
@@ -19,7 +16,6 @@ import { IGlobalContext } from '@context/interfaces';
 
 function App() {
   const { theme } = useContext<IGlobalContext>(GlobalContext);
-  AOS.init();
 
   return (
     <ThemeProvider theme={theme ? darkTheme : lightTheme}>
