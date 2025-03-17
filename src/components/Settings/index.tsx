@@ -1,5 +1,5 @@
 import { useContext, useRef, useState, useEffect } from 'react';
-import { FiSettings, FiLayout, FiZap } from 'react-icons/fi';
+import { FiSettings, FiLayout } from 'react-icons/fi';
 import { MdAnimation, MdFormatSize } from 'react-icons/md';
 import { IoColorPaletteOutline } from 'react-icons/io5';
 import { GlobalContext } from '@context/MyProvider';
@@ -49,6 +49,7 @@ export default function Settings({ className }: SettingsProps) {
 
   const changeFontSize = (size: string) => {
     setFontSize(size as keyof typeof fontSizes);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     setGlobalFontSize(size as any);
     document.documentElement.style.fontSize = fontSizes[size as keyof typeof fontSizes];
     localStorage.setItem('fontSize', size);
