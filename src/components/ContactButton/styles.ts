@@ -5,7 +5,7 @@ export const ButtonContainer = styled.a`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: #5d2de2;
+  background: var(--accent-color, #5d2de2);
   color: white;
   padding: 0.8rem 1.5rem;
   border-radius: 0.25rem;
@@ -13,7 +13,7 @@ export const ButtonContainer = styled.a`
   transition: all 0.2s ease;
   
   &:hover {
-    background: #4920b5;
+    background: var(--accent-color-hover, #4920b5);
     transform: translateY(-2px);
   }
   

@@ -15,12 +15,12 @@ const AboutMe = styled.div`
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    color: #5d2de2;
+    color: var(--accent-color, #5d2de2);
     width: 50%;
   }
 
   .Avatar-Matheus-Img {
-    border: 0.187rem solid #5d2de2;
+    border: 0.187rem solid var(--accent-color, #5d2de2);
     border-radius: 50%;
     width: 40%;
   }
@@ -30,6 +30,7 @@ const AboutMe = styled.div`
     flex-flow: row nowrap;
     justify-content: space-evenly;
     width: 100%;
+    color: var(--accent-color, #5d2de2);
   }
 
   .About-Me-Container {
@@ -59,6 +60,21 @@ const AboutMe = styled.div`
     margin-top: 3rem;
     padding: 2em 0;
     width: 30%;
+    color: #fdfdfd;
+    background: var(--accent-color, #5d2de2);
+    border-radius: 0.187rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      filter: brightness(1.1);
+      transform: translateY(-2px);
+    }
   }
 
   @media screen and (max-width: 768px) {

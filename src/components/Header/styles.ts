@@ -108,7 +108,7 @@ export const NavLink = styled.a`
   transition: color 0.3s ease;
 
   &:hover {
-    color: #5d2de2;
+    color: var(--accent-color, #5d2de2);
   }
 `;
 

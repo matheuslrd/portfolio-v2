@@ -47,7 +47,7 @@ const Projects = styled.div`
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(84, 41, 207, 0.1);
+      box-shadow: 0 15px 30px var(--accent-color-light);
     }
     
     .project-info-container {
@@ -82,7 +82,7 @@ const Projects = styled.div`
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      background: #5429cf;
+      background: var(--accent-color, #5429cf);
       color: white;
       padding: 0.8rem 0;
       border-radius: 0.25rem;
@@ -90,7 +90,7 @@ const Projects = styled.div`
       transition: all 0.2s ease;
       
       &:hover {
-        background: #4520b0;
+        filter: brightness(0.9);
         transform: translateY(-2px);
       }
       
@@ -111,17 +111,17 @@ const Projects = styled.div`
   }
 
   .Link-Repositories-On-GitHub {
-    color: #5929cf;
+    color: var(--accent-color, #5929cf);
     font-size: 1.2rem;
     font-weight: 500;
     transition: 0.2s all ease-out;
     padding: 0.5rem 1rem;
-    border: 2px solid #5929cf;
+    border: 2px solid var(--accent-color, #5929cf);
     border-radius: 0.25rem;
     
     &:hover {
       color: white;
-      background: #5929cf;
+      background: var(--accent-color, #5929cf);
     }
   }
 

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import { ThemeProvider } from 'styled-components';
 import HomePage from '@pages/Home';
 import AboutMe from '@pages/AboutMe';
@@ -9,16 +9,18 @@ import Footer from '@components/Footer';
 
 import StyledApp from '@styles/app';
 
-import { darkTheme, lightTheme } from '@styles/theme';
+import { createTheme } from '@styles/theme';
 import GlobalStyle from '@styles/global';
 import { GlobalContext } from '@context/MyProvider';
 import { IGlobalContext } from '@context/interfaces';
 
 function App() {
-  const { theme } = useContext<IGlobalContext>(GlobalContext);
+  const { theme, accentColor } = useContext<IGlobalContext>(GlobalContext);
+  
+  const activeTheme = useMemo(() => createTheme(theme, accentColor), [theme, accentColor]);
 
   return (
-    <ThemeProvider theme={theme ? darkTheme : lightTheme}>
+    <ThemeProvider theme={activeTheme}>
       <StyledApp>
         <GlobalStyle />
         <HomePage />

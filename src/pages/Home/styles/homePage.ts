@@ -14,7 +14,7 @@ const HomePage = styled.div`
   }
 
   .Mouse-Seta {
-    color: #5d2de2;
+    color: var(--accent-color, #5d2de2);
   }
 
 `;
