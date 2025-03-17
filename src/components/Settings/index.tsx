@@ -181,7 +181,7 @@ export default function Settings({ className }: SettingsProps) {
             </ColorOptionGroup>
           </OptionGroup>
           
-          <OptionGroup>
+          {/* <OptionGroup>
             <OptionLabel>
               <FiLayout size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
               Densidade do conteúdo
@@ -206,7 +206,7 @@ export default function Settings({ className }: SettingsProps) {
                 Espaçoso
               </DensityOption>
             </DensityOptionGroup>
-          </OptionGroup>
+          </OptionGroup> */}
           
           <OptionGroup>
             <ToggleContainer>
