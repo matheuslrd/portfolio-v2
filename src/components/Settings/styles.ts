@@ -50,7 +50,7 @@ export const SettingsModal = styled.div<{ isDarkTheme: boolean }>`
   padding: 1.5rem;
   z-index: 1000;
   top: 40.5885px;
-  right: 13px;
+  right: 0;
   animation: fadeIn 0.2s ease-out;
   border: 1px solid ${({ isDarkTheme }) => 
     isDarkTheme ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'};
@@ -64,6 +64,15 @@ export const SettingsModal = styled.div<{ isDarkTheme: boolean }>`
     width: auto;
     min-width: 250px;
     z-index: 1200;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  @media (max-width: 480px) {
+    bottom: 10px;
+    right: 10px;
+    max-width: calc(100% - 20px);
+    padding: 1.2rem;
   }
   
   &.mobile-modal {
@@ -92,6 +101,13 @@ export const ModalTitle = styled.h3`
       ? 'rgba(255, 255, 255, 0.1)' 
       : 'rgba(0, 0, 0, 0.1)'};
   padding-bottom: 0.75rem;
+  text-align: center;
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+  }
 `;
 
 export const OptionGroup = styled.div`
@@ -100,6 +116,10 @@ export const OptionGroup = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
+  
+  @media (max-width: 480px) {
+    margin-bottom: 1.2rem;
+  }
 `;
 
 export const OptionLabel = styled.div`
@@ -107,22 +127,37 @@ export const OptionLabel = styled.div`
   margin-bottom: 0.75rem;
   color: ${({ theme }) => theme.color.text};
   font-weight: 500;
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+    text-align: center;
+  }
 `;
 
 export const FontSizeGroup = styled.div`
   display: flex;
   gap: 10px;
+  
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
 `;
 
 export const ColorOptionGroup = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-wrap: nowrap;
+  gap: 10px;
+  justify-content: center;
+  
+  @media (max-width: 480px) {
+    gap: 8px;
+  }
 `;
 
 export const ColorOption = styled.button<{ color: string; isActive: boolean }>`
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: ${({ color }) => accentColorMap[color]?.primary || color};
   border: 2px solid ${({ isActive, theme }) => 
@@ -134,6 +169,7 @@ export const ColorOption = styled.button<{ color: string; isActive: boolean }>`
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
+  margin: 0 2px;
   
   &:hover {
     transform: scale(1.1);
@@ -151,8 +187,8 @@ export const ColorOption = styled.button<{ color: string; isActive: boolean }>`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 12px;
-      height: 12px;
+      width: 14px;
+      height: 14px;
       background: white;
       border-radius: 50%;
     }
@@ -202,6 +238,11 @@ export const ToggleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
 export const ToggleLabel = styled.span`
@@ -245,8 +286,8 @@ export const DensityOption = styled.button<{ isActive: boolean }>`
 `;
 
 export const FontSizeOption = styled.button<{ isActive: boolean }>`
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 8px;
   border: 2px solid ${({ isActive, theme }) => 
     isActive ? 'var(--accent-color, #5d2de2)' : theme.color.text === '#fdfdfd' 
@@ -262,6 +303,7 @@ export const FontSizeOption = styled.button<{ isActive: boolean }>`
   cursor: pointer;
   font-weight: ${({ isActive }) => (isActive ? 'bold' : 'normal')};
   transition: all 0.2s ease;
+  margin: 0 2px;
   
   &:hover {
     background-color: var(--accent-color-light, rgba(93, 45, 226, 0.1));
