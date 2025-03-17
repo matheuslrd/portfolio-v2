@@ -35,48 +35,6 @@ const HomePage = styled.div`
     }
   }
 
-  #luxbar {
-    background: ${(props) => props.theme.color.secundary};
-    box-shadow: 0 -0.375rem 0.625rem 0.5rem rgba(0, 0, 0, 0.15);
-    position: fixed;
-    top: 0;
-    transition: 0.25s all ease-out;
-    height: 3.625rem;
-    width: 100%;
-    z-index: 100;
-
-    .luxbar-menu {
-      transition: 0.25s all ease-out;
-    }
-
-    .luxbar-menu-dark {
-      overflow-y: hidden;
-      background: ${(props) => props.theme.color.secundary};
-      color: ${(props) => props.theme.color.text};
-      padding: 0 2rem;
-    }
-
-    .luxbar-hamburger span:before,
-    .luxbar-hamburger span:after {
-      background: ${(props) => props.theme.color.text};
-    }
-
-    .luxbar-hamburger span {
-      background: ${(props) => props.theme.color.text};
-    }
-
-    .luxbar-item {
-      align-items: center;
-      display: flex;
-    }
-
-    .luxbar-item:hover {
-      background: none;
-      color: #5d2de2;
-      transition: 0.25s all ease-out;
-    }
-  }
-
   .Title-Name {
     font-family: Merienda, cursive;
     font-size: 1.2rem;
@@ -160,10 +118,6 @@ const HomePage = styled.div`
 
     .Header {
       display: none;
-    }
-
-    .luxbar-navigation .luxbar-item {
-      margin: 0 auto;
     }
 
     .Main-Content {

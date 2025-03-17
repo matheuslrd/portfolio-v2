@@ -28,7 +28,7 @@ function Services() {
           />
           <ServiceCard
             icon={<Ruler size={28} weight="bold" />}
-            title="UI/IX Design"
+            title="UI/UX Design"
             description={`Design de layouts para se adequar ao seu negócio
              e ser fiel ao desenvolvimento.`}
           />

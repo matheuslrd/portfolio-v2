@@ -3,19 +3,19 @@ import { WhatsappLogo, GithubLogo } from '@phosphor-icons/react';
 import devIllustration from '@assets/dev-illustration.svg';
 import StyledHomePage from './styles/homePage';
 
-const HeaderLuxBar = lazy(() => import('./components/HeaderLuxBar'));
+const Header = lazy(() => import('./components/Header'));
 
 function HomePage() {
   return (
     <StyledHomePage>
       <section id="Home-Page">
         <Suspense fallback={<div>Loading...</div>}>
-          <HeaderLuxBar />
+          <Header />
         </Suspense>
         <main className="Main-Content">
           <section className="Contacte-Me-Container" data-aos="zoom-in">
             <div className="summary-container">
-              {/* Componente prioritário para LCP */}
+
               <div 
                 className="summary-about-me"
                 style={{ 
