@@ -3,7 +3,7 @@ import { WhatsappLogo, GithubLogo } from '@phosphor-icons/react';
 import devIllustration from '@assets/dev-illustration.svg';
 import StyledHomePage from './styles/homePage';
 
-const Header = lazy(() => import('./components/Header'));
+const Header = lazy(() => import('../../components/Header'));
 
 function HomePage() {
   return (
