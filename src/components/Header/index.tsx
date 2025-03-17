@@ -1,5 +1,6 @@
-import {  useState } from 'react';
+import { useState } from 'react';
 import ThemeSwitch from '@components/ThemeSwitch';
+import Settings from '@components/Settings';
 import {
   HamburgerButton,
   HeaderContainer,
@@ -44,6 +45,9 @@ export default function Header() {
           </NavItem>
           <NavItem>
             <ThemeSwitch />
+          </NavItem>
+          <NavItem>
+            <Settings />
           </NavItem>
         </NavList>
       </Navigation>
