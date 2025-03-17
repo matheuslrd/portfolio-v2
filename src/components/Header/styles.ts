@@ -38,9 +38,21 @@ export const NavList = styled.ul<{ isOpen: boolean }>`
     align-items: flex-start;
     width: 100%;
     height: auto;
-    max-height: ${({ isOpen }) => (isOpen ? '18.75rem' : '0')};
+    max-height: ${({ isOpen }) => (isOpen ? '25rem' : '0')};
     overflow: hidden;
     transition: max-height 0.5s ease;
+    
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      clear: both;
+    }
+    
+    & > li:nth-last-child(2), & > li:last-child {
+      float: right;
+      margin-top: 10px;
+    }
   }
 `;
 
@@ -75,9 +87,17 @@ export const NavItem = styled.li`
     width: 100%;
     padding: 15px 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: flex-start;
     
     &:after {
       display: none;
+    }
+    
+    &:nth-last-child(2), &:last-child {
+      display: inline-flex;
+      width: auto;
+      border-top: none;
+      padding: 10px;
     }
   }
 `;

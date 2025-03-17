@@ -29,6 +29,7 @@ export default function Settings({ className }: SettingsProps) {
   const [fontSize, setFontSize] = useState('medium');
   const buttonRef = useRef<HTMLButtonElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -51,6 +52,10 @@ export default function Settings({ className }: SettingsProps) {
     }
   };
 
+  const checkIfMobile = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
   useEffect(() => {
     const savedFontSize = localStorage.getItem('fontSize');
     if (savedFontSize) {
@@ -58,9 +63,12 @@ export default function Settings({ className }: SettingsProps) {
       document.documentElement.style.fontSize = fontSizes[savedFontSize as keyof typeof fontSizes];
     }
 
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
     document.addEventListener('mousedown', handleClickOutside);
     
     return () => {
+      window.removeEventListener('resize', checkIfMobile);
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
@@ -73,12 +81,13 @@ export default function Settings({ className }: SettingsProps) {
         ref={buttonRef} 
         onClick={toggleModal}
         aria-label="Configurações"
+        className="settings-button"
       >
         <FiSettings />
       </SettingsButton>
       
       {isModalOpen && (
-        <SettingsModal ref={modalRef} isDarkTheme={theme}>
+        <SettingsModal ref={modalRef} isDarkTheme={theme} className={isMobile ? 'mobile-modal' : ''}>
           <ModalTitle>Preferências</ModalTitle>
           
           <OptionGroup>

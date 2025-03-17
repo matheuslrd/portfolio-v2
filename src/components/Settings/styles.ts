@@ -3,6 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
   position: relative;
   display: inline-block;
+  
+  @media (max-width: 768px) {
+    .settings-button {
+      position: relative;
+      z-index: 1100;
+    }
+  }
 `;
 
 export const SettingsButton = styled.button`
@@ -26,6 +33,11 @@ export const SettingsButton = styled.button`
   &:focus {
     outline: none;
   }
+  
+  @media (max-width: 768px) {
+    padding: 10px;
+    font-size: 22px;
+  }
 `;
 
 export const SettingsModal = styled.div<{ isDarkTheme: boolean }>`
@@ -42,6 +54,26 @@ export const SettingsModal = styled.div<{ isDarkTheme: boolean }>`
   animation: fadeIn 0.2s ease-out;
   border: 1px solid ${({ isDarkTheme }) => 
     isDarkTheme ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'};
+  
+  @media (max-width: 768px) {
+    position: fixed;
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+    max-width: calc(100% - 40px);
+    width: auto;
+    min-width: 250px;
+    z-index: 1200;
+  }
+  
+  &.mobile-modal {
+    animation: fadeInUp 0.3s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
   
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
