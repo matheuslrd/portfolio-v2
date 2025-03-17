@@ -1,9 +1,9 @@
 import { useContext, useRef, useState, useEffect } from 'react';
-import { FiSettings, FiLayout } from 'react-icons/fi';
+import { FiSettings } from 'react-icons/fi';
 import { MdAnimation, MdFormatSize } from 'react-icons/md';
 import { IoColorPaletteOutline } from 'react-icons/io5';
 import { GlobalContext } from '@context/MyProvider';
-import { IGlobalContext, AccentColorType, ContentDensityType } from '@context/interfaces';
+import { IGlobalContext, AccentColorType } from '@context/interfaces';
 import {
   Container,
   SettingsButton,
@@ -19,14 +19,12 @@ import {
   ToggleSlider,
   ToggleContainer,
   ToggleLabel,
-  DensityOptionGroup,
-  DensityOption
 } from './styles';
 
 export const fontSizes = {
   small: '14px',
   medium: '16px',
-  large: '18px'
+  large: '18px',
 };
 
 export interface SettingsProps {
@@ -34,9 +32,15 @@ export interface SettingsProps {
 }
 
 export default function Settings({ className }: SettingsProps) {
-  const { theme, fontSize: globalFontSize, setFontSize: setGlobalFontSize, 
-          accentColor, setAccentColor, animationsEnabled, setAnimationsEnabled,
-          contentDensity, setContentDensity } = useContext<IGlobalContext>(GlobalContext);
+  const {
+    theme,
+    fontSize: globalFontSize,
+    setFontSize: setGlobalFontSize,
+    accentColor,
+    setAccentColor,
+    animationsEnabled,
+    setAnimationsEnabled,
+  } = useContext<IGlobalContext>(GlobalContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [fontSize, setFontSize] = useState(globalFontSize);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -66,16 +70,11 @@ export default function Settings({ className }: SettingsProps) {
     localStorage.setItem('animationsEnabled', JSON.stringify(newValue));
   };
 
-  const changeContentDensity = (density: ContentDensityType) => {
-    setContentDensity(density);
-    localStorage.setItem('contentDensity', density);
-  };
-
   const handleClickOutside = (event: MouseEvent) => {
     if (
-      modalRef.current && 
-      !modalRef.current.contains(event.target as Node) && 
-      buttonRef.current && 
+      modalRef.current &&
+      !modalRef.current.contains(event.target as Node) &&
+      buttonRef.current &&
       !buttonRef.current.contains(event.target as Node)
     ) {
       setIsModalOpen(false);
@@ -91,33 +90,38 @@ export default function Settings({ className }: SettingsProps) {
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
     document.addEventListener('mousedown', handleClickOutside);
-    
+
     return () => {
       window.removeEventListener('resize', checkIfMobile);
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [globalFontSize]);
 
-
-
   return (
     <Container className={className}>
-      <SettingsButton 
-        ref={buttonRef} 
+      <SettingsButton
+        ref={buttonRef}
         onClick={toggleModal}
         aria-label="Configurações"
         className="settings-button"
       >
         <FiSettings />
       </SettingsButton>
-      
+
       {isModalOpen && (
-        <SettingsModal ref={modalRef} isDarkTheme={theme} className={isMobile ? 'mobile-modal' : ''}>
+        <SettingsModal
+          ref={modalRef}
+          isDarkTheme={theme}
+          className={isMobile ? 'mobile-modal' : ''}
+        >
           <ModalTitle>Preferências</ModalTitle>
-          
+
           <OptionGroup>
             <OptionLabel>
-              <MdFormatSize size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+              <MdFormatSize
+                size={16}
+                style={{ marginRight: '6px', verticalAlign: 'middle' }}
+              />
               Tamanho da fonte
             </OptionLabel>
             <FontSizeGroup>
@@ -127,7 +131,7 @@ export default function Settings({ className }: SettingsProps) {
               >
                 P
               </FontSizeOption>
-              <FontSizeOption 
+              <FontSizeOption
                 isActive={fontSize === 'medium'}
                 onClick={() => changeFontSize('medium')}
               >
@@ -141,38 +145,41 @@ export default function Settings({ className }: SettingsProps) {
               </FontSizeOption>
             </FontSizeGroup>
           </OptionGroup>
-          
+
           <OptionGroup>
             <OptionLabel>
-              <IoColorPaletteOutline size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+              <IoColorPaletteOutline
+                size={16}
+                style={{ marginRight: '6px', verticalAlign: 'middle' }}
+              />
               Cor de destaque
             </OptionLabel>
             <ColorOptionGroup>
-              <ColorOption 
+              <ColorOption
                 isActive={accentColor === 'purple'}
                 color="purple"
                 onClick={() => changeAccentColor('purple')}
                 aria-label="Roxo"
               />
-              <ColorOption 
+              <ColorOption
                 isActive={accentColor === 'blue'}
                 color="blue"
                 onClick={() => changeAccentColor('blue')}
                 aria-label="Azul"
               />
-              <ColorOption 
+              <ColorOption
                 isActive={accentColor === 'green'}
                 color="green"
                 onClick={() => changeAccentColor('green')}
                 aria-label="Verde"
               />
-              <ColorOption 
+              <ColorOption
                 isActive={accentColor === 'red'}
                 color="red"
                 onClick={() => changeAccentColor('red')}
                 aria-label="Vermelho"
               />
-              <ColorOption 
+              <ColorOption
                 isActive={accentColor === 'orange'}
                 color="orange"
                 onClick={() => changeAccentColor('orange')}
@@ -180,7 +187,7 @@ export default function Settings({ className }: SettingsProps) {
               />
             </ColorOptionGroup>
           </OptionGroup>
-          
+
           {/* <OptionGroup>
             <OptionLabel>
               <FiLayout size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
@@ -207,18 +214,21 @@ export default function Settings({ className }: SettingsProps) {
               </DensityOption>
             </DensityOptionGroup>
           </OptionGroup> */}
-          
+
           <OptionGroup>
             <ToggleContainer>
               <ToggleLabel>
-                <MdAnimation size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                <MdAnimation
+                  size={16}
+                  style={{ marginRight: '6px', verticalAlign: 'middle' }}
+                />
                 Animações
               </ToggleLabel>
               <ToggleSwitch>
-                <input 
-                  type="checkbox" 
-                  checked={animationsEnabled} 
-                  onChange={toggleAnimations} 
+                <input
+                  type="checkbox"
+                  checked={animationsEnabled}
+                  onChange={toggleAnimations}
                 />
                 <ToggleSlider isOn={animationsEnabled} />
               </ToggleSwitch>
