@@ -45,15 +45,34 @@ const Services = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     max-width: 320px;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0.25rem;
+      background: var(--accent-color, #5429cf);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover::before {
+      transform: scaleX(1);
+    }
   }
 
   .Service:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(84, 41, 207, 0.1);
+    box-shadow: 0 15px 30px var(--accent-color-light);
   }
 
   .Icon-Service {
-    color: #5429cf;
+    color: var(--accent-color, #5429cf);
     text-align: center;
     padding: 2rem 0;
     display: flex;
@@ -65,6 +84,11 @@ const Services = styled.div`
   .Icon-Service svg {
     width: 3rem;
     height: 3rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .Service:hover .Icon-Service svg {
+    transform: scale(1.1);
   }
 
   .Title-Service {

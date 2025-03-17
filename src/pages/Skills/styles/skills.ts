@@ -54,7 +54,7 @@ const Skills = styled.div`
     border: 0.25rem solid ${(props) => props.theme.color.secundary};
     border-radius: 0.5rem;
     box-shadow: 0.125rem 0.125rem 0.5rem rgba(0, 0, 0, 0.15);
-    color: #5429cf;
+    color: var(--accent-color, #5429cf);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -75,9 +75,9 @@ const Skills = styled.div`
   }
 
   .Skill-Card:hover {
-    border-bottom: 0.25rem solid #5429cf;
+    border-bottom: 0.25rem solid var(--accent-color, #5429cf);
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(84, 41, 207, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   }
 
   @media screen and (max-width: 1024px) {

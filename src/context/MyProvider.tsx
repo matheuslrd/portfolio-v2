@@ -48,15 +48,11 @@ function GlobalProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  // Aplicar as configurações ao documento
   useEffect(() => {
-    // Aplicar densidade de conteúdo
     document.documentElement.setAttribute('data-density', contentDensity);
     
-    // Aplicar cor de destaque
     document.documentElement.setAttribute('data-accent-color', accentColor);
     
-    // Aplicar animações
     if (!animationsEnabled) {
       document.documentElement.classList.add('no-animations');
     } else {

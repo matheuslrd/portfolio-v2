@@ -12,7 +12,7 @@ export const SwitchInput = styled.input`
   position: absolute;
   
   &:focus + label {
-    box-shadow: 0 0 1px 3px rgba(93, 45, 226, 0.3);
+    box-shadow: 0 0 1px 3px var(--accent-color-light);
   }
 `;
 
@@ -43,9 +43,9 @@ export const SwitchSlider = styled.span<{ isActive: boolean }>`
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: linear-gradient(40deg, #5d2de2, #7350ea);
+  background: linear-gradient(40deg, var(--accent-color, #5d2de2), var(--accent-color-light, #7350ea));
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(93, 45, 226, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 0 2px var(--accent-color-light);
   z-index: 2;
   
   &:after {
@@ -56,14 +56,14 @@ export const SwitchSlider = styled.span<{ isActive: boolean }>`
     transform: translate(-50%, -50%);
     width: 16px;
     height: 16px;
-    background: linear-gradient(40deg, #6d3df2, #8360fa);
+    background: linear-gradient(40deg, var(--accent-color-dark, #6d3df2), var(--accent-color, #8360fa));
     border-radius: 50%;
     transition: all 0.3s ease;
   }
   
   &:hover {
     filter: brightness(1.1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(93, 45, 226, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 0 2px var(--accent-color-light);
   }
 `;
 

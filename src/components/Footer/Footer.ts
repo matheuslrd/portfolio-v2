@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Footer = styled.div`
   .Footer {
-    background: #5429cf;
+    background: var(--accent-color, #5429cf);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,8 +33,8 @@ const Footer = styled.div`
   }
 
   .Back-To-Home {
-    background: #4622aa;
-    border: 2px solid #4622aa;
+    background: var(--accent-color-dark, #4622aa);
+    border: 2px solid var(--accent-color-dark, #4622aa);
     border-radius: 0.2rem;
     cursor: pointer;
     color: #fdfdfd;
@@ -47,12 +47,12 @@ const Footer = styled.div`
   }
 
   .Icon-Footer:hover {
-    color: #e3d42d;
+    color: var(--accent-color-contrast, #e3d42d);
   }
 
   .Back-To-Home:hover {
-    border: 2px solid #351980;
-    background: #351980;
+    border: 2px solid var(--accent-color-darker, #351980);
+    background: var(--accent-color-darker, #351980);
   }
   @media screen and (max-width: 768px) {
     .Footer-Icons-Container {
