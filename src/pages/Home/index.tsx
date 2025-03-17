@@ -1,7 +1,7 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useContext } from 'react';
 import { WhatsappLogo, GithubLogo } from '@phosphor-icons/react';
-import devIllustration from '@assets/dev-illustration.svg';
-import ContactButton from '@components/ContactButton';
+import { GlobalContext } from '@context/MyProvider';
+import { IGlobalContext } from '@context/interfaces';
 import StyledHomePage from './styles/homePage';
 import {
   HomePageSection,
@@ -12,13 +12,16 @@ import {
   StudentWeb,
   ButtonsContact,
   IllustrationContainer,
-  IllustrationImage,
   ArrowContainer
 } from './styles/components';
+import ContactButton from '@components/ContactButton';
+import { DevIllustration } from '@components/DevIllustration';
 
 const Header = lazy(() => import('../../components/Header'));
 
 function HomePage() {
+  const { accentColor } = useContext<IGlobalContext>(GlobalContext);
+
   return (
     <StyledHomePage>
       <HomePageSection id="Home-Page">
@@ -70,14 +73,7 @@ function HomePage() {
               containIntrinsicSize: '0 500px'
             }}
           >
-            <IllustrationImage
-              src={devIllustration}
-              alt="Ilustração de um desenvolvedor programando"
-              loading="lazy"
-              decoding="async"
-              width="500"
-              height="500"
-            />
+            <DevIllustration color={accentColor} />
           </IllustrationContainer>
         </MainContent>
         <a href="#About-Me">

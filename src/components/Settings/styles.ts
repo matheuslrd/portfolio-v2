@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { accentColorMap } from '../../styles/accentColors';
 
 export const Container = styled.div`
   position: relative;
@@ -26,7 +27,7 @@ export const SettingsButton = styled.button`
   border-radius: 50%;
   
   &:hover {
-    color: #5d2de2;
+    color: var(--accent-color, #5d2de2);
     transform: rotate(30deg);
   }
   
@@ -42,7 +43,6 @@ export const SettingsButton = styled.button`
 
 export const SettingsModal = styled.div<{ isDarkTheme: boolean }>`
   position: absolute;
-  width: 280px;
   background-color: ${({ isDarkTheme }) => 
     isDarkTheme ? '#252528' : '#f5f5f7'};
   border-radius: 12px;
@@ -114,18 +114,148 @@ export const FontSizeGroup = styled.div`
   gap: 10px;
 `;
 
+export const ColorOptionGroup = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+`;
+
+export const ColorOption = styled.button<{ color: string; isActive: boolean }>`
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: ${({ color }) => accentColorMap[color]?.primary || color};
+  border: 2px solid ${({ isActive, theme }) => 
+    isActive 
+      ? theme.color.text === '#fdfdfd' 
+        ? 'rgba(255, 255, 255, 0.8)' 
+        : 'rgba(0, 0, 0, 0.8)' 
+      : 'transparent'};
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-color-light, rgba(93, 45, 226, 0.3));
+  }
+  
+  ${({ isActive }) => isActive && `
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+    }
+  `}
+`;
+
+export const ToggleSwitch = styled.label`
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+`;
+
+export const ToggleSlider = styled.span<{ isOn: boolean }>`
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: ${({ isOn }) => 
+    isOn ? 'var(--accent-color, #5d2de2)' : 'rgba(0, 0, 0, 0.25)'};
+  transition: .4s;
+  border-radius: 24px;
+  
+  &:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    transform: ${({ isOn }) => isOn ? 'translateX(24px)' : 'translateX(0)'};
+  }
+`;
+
+export const ToggleContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const ToggleLabel = styled.span`
+  font-size: 0.9rem;
+  color: ${({ theme }) => theme.color.text};
+`;
+
+export const DensityOptionGroup = styled.div`
+  display: flex;
+  gap: 8px;
+  width: 100%;
+`;
+
+export const DensityOption = styled.button<{ isActive: boolean }>`
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 2px solid ${({ isActive, theme }) => 
+    isActive ? 'var(--accent-color, #5d2de2)' : theme.color.text === '#fdfdfd' 
+      ? 'rgba(255, 255, 255, 0.2)' 
+      : 'rgba(0, 0, 0, 0.2)'};
+  background-color: ${({ isActive }) => 
+    isActive ? 'var(--accent-color-light, rgba(93, 45, 226, 0.1))' : 'transparent'};
+  color: ${({ isActive, theme }) => 
+    isActive ? 'var(--accent-color, #5d2de2)' : theme.color.text};
+  font-size: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: var(--accent-color-light, rgba(93, 45, 226, 0.1));
+    border-color: var(--accent-color, #5d2de2);
+    color: var(--accent-color, #5d2de2);
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-color-light, rgba(93, 45, 226, 0.3));
+  }
+`;
+
 export const FontSizeOption = styled.button<{ isActive: boolean }>`
   width: 40px;
   height: 40px;
   border-radius: 8px;
   border: 2px solid ${({ isActive, theme }) => 
-    isActive ? '#5d2de2' : theme.color.text === '#fdfdfd' 
+    isActive ? 'var(--accent-color, #5d2de2)' : theme.color.text === '#fdfdfd' 
       ? 'rgba(255, 255, 255, 0.2)' 
       : 'rgba(0, 0, 0, 0.2)'};
   background-color: ${({ isActive }) => 
-    isActive ? 'rgba(93, 45, 226, 0.1)' : 'transparent'};
+    isActive ? 'var(--accent-color-light, rgba(93, 45, 226, 0.1))' : 'transparent'};
   color: ${({ isActive, theme }) => 
-    isActive ? '#5d2de2' : theme.color.text};
+    isActive ? 'var(--accent-color, #5d2de2)' : theme.color.text};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,13 +264,13 @@ export const FontSizeOption = styled.button<{ isActive: boolean }>`
   transition: all 0.2s ease;
   
   &:hover {
-    background-color: rgba(93, 45, 226, 0.1);
-    border-color: #5d2de2;
-    color: #5d2de2;
+    background-color: var(--accent-color-light, rgba(93, 45, 226, 0.1));
+    border-color: var(--accent-color, #5d2de2);
+    color: var(--accent-color, #5d2de2);
   }
   
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(93, 45, 226, 0.3);
+    box-shadow: 0 0 0 2px var(--accent-color-light, rgba(93, 45, 226, 0.3));
   }
 `;

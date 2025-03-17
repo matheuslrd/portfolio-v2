@@ -194,8 +194,8 @@ export const ArrowContainer = styled.div`
     display: block;
     width: 0.937rem;
     height: 0.937rem;
-    border-bottom: 0.187rem solid #5d2de2;
-    border-right: 0.187rem solid #5d2de2;
+    border-bottom: 0.187rem solid var(--accent-color, #5d2de2);
+    border-right: 0.187rem solid var(--accent-color, #5d2de2);
     transform: rotate(45deg);
     animation: ${arrowAnimation} 2s infinite;
   }
