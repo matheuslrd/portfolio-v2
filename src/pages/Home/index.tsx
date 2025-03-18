@@ -76,7 +76,7 @@ function HomePage() {
               containIntrinsicSize: '0 500px',
             }}
           >
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div aria-hidden="true">Loading...</div>}>
               <DevIllustration color={accentColor} />
             </Suspense>
           </IllustrationContainer>

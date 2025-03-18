@@ -56,7 +56,11 @@ export const ContactMeContainer = styled.section`
     padding-right: 0;
     align-items: center;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media screen and (max-width: 480px) {
+    margin-bottom: 1rem;
   }
 `;
 
@@ -80,6 +84,10 @@ export const SummaryAboutMe = styled.div`
     font-weight: 700;
     margin: 0.5rem 0;
     color: ${(props) => props.theme.color.text};
+    background: linear-gradient(90deg, var(--accent-color, #5d2de2) 0%, #9b59b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     
     @media screen and (max-width: 1024px) {
       font-size: 2.5rem;
@@ -121,9 +129,16 @@ export const StudentWeb = styled.span`
   font-weight: 500;
   display: block;
   margin-top: 0.5rem;
+  color: ${(props) => props.theme.color.textSecondary};
+  font-size: 1.2rem;
+  
+  @media screen and (max-width: 768px) {
+    font-size: 1.1rem;
+  }
   
   @media screen and (max-width: 480px) {
     margin-top: 0.3rem;
+    font-size: 1rem;
   }
 `;
 
@@ -155,7 +170,13 @@ export const IllustrationContainer = styled.section`
   flex: 1;
   
   @media screen and (max-width: 768px) {
-    display: none;
+    display: flex;
+    margin-top: 1rem;
+    max-width: 300px;
+  }
+  
+  @media screen and (max-width: 480px) {
+    max-width: 250px;
   }
 `;
 
