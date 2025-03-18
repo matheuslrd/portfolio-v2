@@ -19,6 +19,10 @@ export default function Header() {
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
+  
+  function closeMenu() {
+    setIsMenuOpen(false);
+  }
 
   return (
     <HeaderContainer>
@@ -26,22 +30,22 @@ export default function Header() {
         <NavHeader>
           <Logo href="#">Matheus Laurindo</Logo>
           <HamburgerButton onClick={toggleMenu}>
-            <HamburgerIcon />
+            <HamburgerIcon isOpen={isMenuOpen} />
           </HamburgerButton>
         </NavHeader>
 
         <NavList isOpen={isMenuOpen}>
           <NavItem>
-            <NavLink href="#About-Me">Sobre Mim</NavLink>
+            <NavLink href="#About-Me" onClick={closeMenu}>Sobre Mim</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#Projects">Projetos</NavLink>
+            <NavLink href="#Projects" onClick={closeMenu}>Projetos</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#Services">Serviços</NavLink>
+            <NavLink href="#Services" onClick={closeMenu}>Serviços</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#Skills">Habilidades</NavLink>
+            <NavLink href="#Skills" onClick={closeMenu}>Habilidades</NavLink>
           </NavItem>
           <NavItem>
             <ThemeSwitch />

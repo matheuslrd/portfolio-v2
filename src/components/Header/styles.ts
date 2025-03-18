@@ -122,10 +122,32 @@ export const HamburgerButton = styled.label`
   }
 `;
 
-export const HamburgerIcon = styled.span`
+export const HamburgerIcon = styled.span<{ isOpen?: boolean }>`
   display: block;
   width: 25px;
   height: 3px;
-  background: ${({ theme }) => theme.color.text || '#fff'};
+  background: ${({ isOpen, theme }) => isOpen ? 'transparent' : theme.color.text || '#fff'};
   position: relative;
+  transition: all 0.3s ease;
+  
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: ${({ theme }) => theme.color.text || '#fff'};
+    position: absolute;
+    transition: transform 0.3s ease;
+  }
+  
+  &::before {
+    top: ${({ isOpen }) => isOpen ? '0' : '-8px'};
+    transform: ${({ isOpen }) => isOpen ? 'rotate(45deg)' : 'rotate(0)'};
+  }
+  
+  &::after {
+    bottom: ${({ isOpen }) => isOpen ? '0' : '-8px'};
+    transform: ${({ isOpen }) => isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+  }
 `;
