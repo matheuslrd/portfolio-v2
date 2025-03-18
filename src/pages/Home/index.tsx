@@ -1,5 +1,6 @@
 import { lazy, Suspense, useContext } from 'react';
 import { WhatsappLogo, GithubLogo } from '@phosphor-icons/react';
+import { SEO } from '@components/SEO';
 import { GlobalContext } from '@context/MyProvider';
 import { IGlobalContext } from '@context/interfaces';
 import StyledHomePage from './styles/homePage';
@@ -24,6 +25,11 @@ function HomePage() {
 
   return (
     <StyledHomePage>
+      <SEO 
+        title="Matheus Laurindo - Desenvolvedor Full Stack | Página Inicial"
+        description="Olá, sou Matheus Laurindo, Desenvolvedor Full Stack especializado em ReactJS e Node.js. Conheça meu trabalho e projetos de desenvolvimento web."
+        keywords="desenvolvedor web, full stack, React, Node.js, JavaScript, TypeScript, portfólio, Matheus Laurindo"
+      />
       <HomePageSection id="Home-Page">
         <Suspense fallback={<div>Loading...</div>}>
           <Header />

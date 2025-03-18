@@ -6,6 +6,7 @@ import Projects from '@pages/Projects';
 import Services from '@pages/Services';
 import Skills from '@pages/Skills';
 import Footer from '@components/Footer';
+import { SEO } from '@components/SEO';
 
 import StyledApp from '@styles/app';
 
@@ -16,12 +17,16 @@ import { IGlobalContext } from '@context/interfaces';
 
 function App() {
   const { theme, accentColor } = useContext<IGlobalContext>(GlobalContext);
-  
-  const activeTheme = useMemo(() => createTheme(theme, accentColor), [theme, accentColor]);
+
+  const activeTheme = useMemo(
+    () => createTheme(theme, accentColor),
+    [theme, accentColor],
+  );
 
   return (
     <ThemeProvider theme={activeTheme}>
       <StyledApp>
+        <SEO />
         <GlobalStyle />
         <HomePage />
         <AboutMe />
