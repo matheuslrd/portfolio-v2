@@ -12,7 +12,7 @@ const App = styled.div`
   }
 
   .btn-contact {
-    background: #5d2de2;
+    background: var(--accent-color, #5d2de2);
     border-radius: 0.187rem;
     color: #fdfdfd;
     height: 2.399rem;

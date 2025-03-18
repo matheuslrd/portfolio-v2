@@ -46,10 +46,16 @@ function AboutMe() {
                 Sou formado em
                 <b> Tecnologia Da Informação </b>
                 pela
-                <i> QI Escolas e Faculdades </i>e atualmente estudo
-                <b> Desenvolvimento Web </b>
+                <i> QI Escolas e Faculdades </i>e<b> Desenvolvimento Web </b>
                 na
                 <i> Trybe. </i>
+              </p>
+              <br />
+              <p>
+                Tenho
+                {` ${new Date().getFullYear() - 2021} `}+
+                anos de experiência na área, onde me envolvi em inúmeros projetos com foco
+                em desenvolvimento web e soluções tecnológicas inovadoras.
               </p>
             </section>
 

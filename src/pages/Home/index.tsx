@@ -41,7 +41,7 @@ function HomePage() {
                 <span>Olá, eu sou</span>
                 <br />
                 <h1>Matheus Laurindo</h1>
-                <StudentWeb>Estudante de Desenvolvimento Web.</StudentWeb>
+                <StudentWeb>Desenvolvedor Web Fullstack - React e Node.</StudentWeb>
               </SummaryAboutMe>
 
               <ButtonsContact>
