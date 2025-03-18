@@ -24,6 +24,8 @@ function AboutMe() {
             className="Avatar-Matheus-Img"
             src="https://i.ibb.co/7NLrhTX/matheus-img.jpg"
             alt="Minha Figura"
+            width={311}
+            height={311}
           />
           <div className="Icons">
             <FileCss size={28} weight="bold" />

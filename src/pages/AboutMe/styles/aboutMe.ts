@@ -23,6 +23,7 @@ const AboutMe = styled.div`
     border: 0.187rem solid var(--accent-color, #5d2de2);
     border-radius: 50%;
     width: 40%;
+    height: auto;
   }
 
   .Icons {
