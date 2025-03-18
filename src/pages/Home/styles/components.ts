@@ -170,7 +170,7 @@ export const IllustrationContainer = styled.section`
   flex: 1;
   
   @media screen and (max-width: 768px) {
-    display: flex;
+    display: none;
     margin-top: 1rem;
     max-width: 300px;
   }
