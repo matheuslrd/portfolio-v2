@@ -12,7 +12,7 @@ const COLORS = {
   red: accentColorMap.red.primary,
 } as const;
 
-export function DevIllustration(props: Props) {
+export default function DevIllustration(props: Props) {
   const color = COLORS[props.color || 'purple'];
 
   return (

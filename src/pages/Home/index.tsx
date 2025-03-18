@@ -13,35 +13,32 @@ import {
   StudentWeb,
   ButtonsContact,
   IllustrationContainer,
-  ArrowContainer
+  ArrowContainer,
 } from './styles/components';
 import ContactButton from '@components/ContactButton';
-import { DevIllustration } from '@components/DevIllustration';
 
 const Header = lazy(() => import('../../components/Header'));
+const DevIllustration = lazy(() => import('../../components/DevIllustration'));
 
 function HomePage() {
   const { accentColor } = useContext<IGlobalContext>(GlobalContext);
 
   return (
     <StyledHomePage>
-      <SEO 
+      <SEO
         title="Matheus Laurindo - Desenvolvedor Full Stack | Página Inicial"
         description="Olá, sou Matheus Laurindo, Desenvolvedor Full Stack especializado em ReactJS e Node.js. Conheça meu trabalho e projetos de desenvolvimento web."
         keywords="desenvolvedor web, full stack, React, Node.js, JavaScript, TypeScript, portfólio, Matheus Laurindo"
       />
       <HomePageSection id="Home-Page">
-        <Suspense fallback={<div>Loading...</div>}>
-          <Header />
-        </Suspense>
+        <Header />
         <MainContent>
           <ContactMeContainer data-aos="zoom-in">
             <SummaryContainer>
-
               <SummaryAboutMe
-                style={{ 
+                style={{
                   contentVisibility: 'auto',
-                  containIntrinsicSize: '0 500px'
+                  containIntrinsicSize: '0 500px',
                 }}
               >
                 <span>Olá, eu sou</span>
@@ -74,12 +71,14 @@ function HomePage() {
 
           <IllustrationContainer
             data-aos="zoom-in"
-            style={{ 
+            style={{
               contentVisibility: 'auto',
-              containIntrinsicSize: '0 500px'
+              containIntrinsicSize: '0 500px',
             }}
           >
-            <DevIllustration color={accentColor} />
+            <Suspense fallback={<div>Loading...</div>}>
+              <DevIllustration color={accentColor} />
+            </Suspense>
           </IllustrationContainer>
         </MainContent>
         <a href="#About-Me">

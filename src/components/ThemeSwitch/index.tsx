@@ -1,7 +1,14 @@
 import { useContext } from 'react';
 import { GlobalContext } from '@context/MyProvider';
 import { IGlobalContext } from '@context/interfaces';
-import { Container, SwitchInput, SwitchLabel, SwitchSlider, MoonIcon, SunIcon } from './styles';
+import {
+  Container,
+  SwitchInput,
+  SwitchLabel,
+  SwitchSlider,
+  MoonIcon,
+  SunIcon,
+} from './styles';
 import { FiMoon, FiSun } from 'react-icons/fi';
 
 interface ThemeSwitchProps {
@@ -18,21 +25,21 @@ export default function ThemeSwitch({ className }: ThemeSwitchProps) {
 
   return (
     <Container className={className}>
-      <SwitchInput 
-        type="checkbox" 
-        id="theme-switch" 
-        checked={theme} 
-        onChange={changeTheme} 
-      />
-      <SwitchLabel htmlFor="theme-switch">
-        <MoonIcon isActive={theme}>
-          <FiMoon />
-        </MoonIcon>
-        <SunIcon isActive={!theme}>
-          <FiSun />
-        </SunIcon>
-        <SwitchSlider isActive={theme} />
-      </SwitchLabel>
+        <SwitchInput
+          type="checkbox"
+          id="theme-switch"
+          checked={theme}
+          onChange={changeTheme}
+        />
+        <SwitchLabel htmlFor="theme-switch">
+          <MoonIcon isActive={theme}>
+            <FiMoon />
+          </MoonIcon>
+          <SunIcon isActive={!theme}>
+            <FiSun />
+          </SunIcon>
+          <SwitchSlider isActive={theme} />
+        </SwitchLabel>
     </Container>
   );
 }
