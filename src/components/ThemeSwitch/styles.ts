@@ -21,11 +21,11 @@ export const SwitchLabel = styled.label`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px;
-  width: 60px;
-  height: 30px;
+  padding: 0.3125rem;
+  width: 3.75rem;
+  height: 1.875rem;
   background-color: #3a3a3c;
-  border-radius: 30px;
+  border-radius: 1.875rem;
   cursor: pointer;
   transition: all 0.3s ease;
   overflow: hidden;
@@ -38,10 +38,10 @@ export const SwitchLabel = styled.label`
 
 export const SwitchSlider = styled.span<{ isActive: boolean }>`
   position: absolute;
-  top: 3px;
+  top: 0.1875rem;
   left: ${({ isActive }) => (isActive ? 'calc(100% - 28px)' : '3px')};
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   background: linear-gradient(40deg, var(--accent-color, #5d2de2), var(--accent-color-light, #7350ea));
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -54,8 +54,8 @@ export const SwitchSlider = styled.span<{ isActive: boolean }>`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     background: linear-gradient(40deg, var(--accent-color-dark, #6d3df2), var(--accent-color, #8360fa));
     border-radius: 50%;
     transition: all 0.3s ease;
@@ -71,19 +71,19 @@ const IconBase = styled.div<{ isActive: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
   z-index: 1;
   color: ${({ isActive }) => (isActive ? '#fff' : 'rgba(255, 255, 255, 0.5)')};
   transition: all 0.3s ease;
   position: relative;
-  margin: 0 2px;
+  margin: 0 0.125rem;
 `;
 
 export const MoonIcon = styled(IconBase)`
   &:before {
     content: '🌙';
-    font-size: 14px;
+    font-size: 0.875rem;
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform: ${({ isActive }) => (isActive ? 'scale(1)' : 'scale(0.8)')};
     opacity: ${({ isActive }) => (isActive ? 1 : 0.5)};
@@ -93,7 +93,7 @@ export const MoonIcon = styled(IconBase)`
 export const SunIcon = styled(IconBase)`
   &:before {
     content: '☀️';
-    font-size: 14px;
+    font-size: 0.875rem;
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform: ${({ isActive }) => (isActive ? 'scale(1)' : 'scale(0.8)')};
     opacity: ${({ isActive }) => (isActive ? 1 : 0.5)};

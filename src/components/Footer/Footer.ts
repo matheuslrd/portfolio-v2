@@ -34,7 +34,7 @@ const Footer = styled.div`
 
   .Back-To-Home {
     background: var(--accent-color-dark, #4622aa);
-    border: 2px solid var(--accent-color-dark, #4622aa);
+    border: 0.125rem solid var(--accent-color-dark, #4622aa);
     border-radius: 0.2rem;
     cursor: pointer;
     color: #fdfdfd;
@@ -51,7 +51,7 @@ const Footer = styled.div`
   }
 
   .Back-To-Home:hover {
-    border: 2px solid var(--accent-color-darker, #351980);
+    border: 0.125rem solid var(--accent-color-darker, #351980);
     background: var(--accent-color-darker, #351980);
   }
   @media screen and (max-width: 768px) {

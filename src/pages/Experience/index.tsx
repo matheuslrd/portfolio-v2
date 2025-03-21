@@ -3,7 +3,7 @@ import { SEO } from '@components/SEO';
 import { BriefcaseMetal, Buildings, Calendar } from '@phosphor-icons/react';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
-import StyledExperience from './styles/experience';
+import StyledExperience from './styles';
 
 const experiences = [
   {
