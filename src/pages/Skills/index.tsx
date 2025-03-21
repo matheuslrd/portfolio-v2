@@ -1,8 +1,8 @@
 import { FaReact, FaJs, FaNode } from 'react-icons/fa';
 import { SiRedux, SiJest, SiStyledcomponents, SiDocker, SiGit } from 'react-icons/si';
 
-import StyledSkills from './styles/skills';
-import SkillCard from './components/SkillCard';
+import StyledSkills from './styles';
+import SkillCard from '../../components/SkillCard';
 import { BiLogoTypescript } from 'react-icons/bi';
 
 function Skills() {
@@ -44,9 +44,6 @@ function Skills() {
             <SkillCard icon={<SiDocker size="3.3em" />} text="Docker" />
             <SkillCard icon={<SiGit size="3.3em" />} text="Git" />
           </section>
-        </div>
-        <div>
-          <div id="Experience" />
         </div>
       </section>
     </StyledSkills>

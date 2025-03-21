@@ -135,7 +135,7 @@ const Experience = styled.div`
       
       &::-webkit-scrollbar-thumb {
         background: var(--accent-color);
-        border-radius: 0.125rem;
+        border-radius: 0.1875rem;
       }
     }
 

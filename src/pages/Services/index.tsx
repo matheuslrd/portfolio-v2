@@ -1,5 +1,5 @@
-import ServiceCard from './components/ServiceCard';
-import StyledServices from './styles/services';
+import ServiceCard from '@components/ServiceCard';
+import StyledServices from './styles';
 import {
   Laptop,
   DeviceMobileCamera,
