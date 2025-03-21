@@ -68,11 +68,12 @@ export const NavHeader = styled.div`
   }
 `;
 
-export const Logo = styled.a`
+export const Logo = styled.a.attrs({ as: 'a' })`
   color: ${({ theme }) => theme.color.text || '#fff'};
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5rem;
+  cursor: pointer;
 `;
 
 export const NavItem = styled.li`
@@ -102,10 +103,11 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.a.attrs({ as: 'a' })`
   color: ${({ theme }) => theme.color.text || '#fff'};
   text-decoration: none;
   transition: color 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     color: var(--accent-color, #5d2de2);

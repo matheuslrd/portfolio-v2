@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import ThemeSwitch from '@components/ThemeSwitch';
 import Settings from '@components/Settings';
 import {
@@ -15,6 +16,7 @@ import {
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -24,29 +26,30 @@ export default function Header() {
     setIsMenuOpen(false);
   }
 
+  const isHome = location.pathname === '/';
+
   return (
     <HeaderContainer>
       <Navigation>
         <NavHeader>
-          <Logo href="#">Matheus Laurindo</Logo>
+          <Logo as={Link} to="/">Matheus Laurindo</Logo>
           <HamburgerButton onClick={toggleMenu}>
             <HamburgerIcon isOpen={isMenuOpen} />
           </HamburgerButton>
         </NavHeader>
 
         <NavList isOpen={isMenuOpen}>
-          <NavItem>
-            <NavLink href="#About-Me" onClick={closeMenu}>Sobre Mim</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#Projects" onClick={closeMenu}>Projetos</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#Services" onClick={closeMenu}>Serviços</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#Skills" onClick={closeMenu}>Habilidades</NavLink>
-          </NavItem>
+          {isHome ? (
+            <>
+              <NavItem>
+                <NavLink as={Link} to="/experiencias" onClick={closeMenu}>Experiências</NavLink>
+              </NavItem>
+            </>
+          ) : (
+            <NavItem>
+              <NavLink as={Link} to="/" onClick={closeMenu}>Voltar</NavLink>
+            </NavItem>
+          )}
           <NavItem>
             <ThemeSwitch />
           </NavItem>

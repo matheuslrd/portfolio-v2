@@ -45,6 +45,9 @@ function Skills() {
             <SkillCard icon={<SiGit size="3.3em" />} text="Git" />
           </section>
         </div>
+        <div>
+          <div id="Experience" />
+        </div>
       </section>
     </StyledSkills>
   );

@@ -1,5 +1,6 @@
 import { lazy, Suspense, useContext, useMemo } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from '@pages/Home';
 import Footer from '@components/Footer';
 import { SEO } from '@components/SEO';
@@ -14,6 +15,28 @@ const AboutMe = lazy(() => import('./pages/AboutMe'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Services = lazy(() => import('./pages/Services'));
 const Skills = lazy(() => import('./pages/Skills'));
+const Experience = lazy(() => import('./pages/Experience'));
+
+function MainLayout() {
+  return (
+    <>
+      <HomePage />
+      <Suspense fallback={<div>Loading...</div>}>
+        <AboutMe />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Projects />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Services />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Skills />
+      </Suspense>
+      <Footer />
+    </>
+  );
+}
 
 function App() {
   const { theme, accentColor } = useContext<IGlobalContext>(GlobalContext);
@@ -24,26 +47,25 @@ function App() {
   );
 
   return (
-    <ThemeProvider theme={activeTheme}>
-      <StyledApp>
-        <SEO />
-        <GlobalStyle />
-        <HomePage />
-        <Suspense fallback={<div>Loading...</div>}>
-          <AboutMe />
-        </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Projects />
-        </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Services />
-        </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Skills />
-        </Suspense>
-        <Footer />
-      </StyledApp>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={activeTheme}>
+        <StyledApp>
+          <SEO />
+          <GlobalStyle />
+          <Routes>
+            <Route path="/" element={<MainLayout />} />
+            <Route
+              path="/experiencias"
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <Experience />
+                </Suspense>
+              }
+            />
+          </Routes>
+        </StyledApp>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
