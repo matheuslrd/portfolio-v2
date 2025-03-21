@@ -74,7 +74,7 @@ const AboutMe = styled.div`
     
     &:hover {
       filter: brightness(1.1);
-      transform: translateY(-2px);
+      transform: translateY(-0.125rem);
     }
   }
 

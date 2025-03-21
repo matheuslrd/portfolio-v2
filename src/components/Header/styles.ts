@@ -68,7 +68,7 @@ export const NavHeader = styled.div`
   }
 `;
 
-export const Logo = styled.a.attrs({ as: 'a' })`
+export const Logo = styled.a`
   color: ${({ theme }) => theme.color.text || '#fff'};
   text-decoration: none;
   font-weight: bold;
@@ -103,7 +103,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled.a.attrs({ as: 'a' })`
+export const NavLink = styled.a`
   color: ${({ theme }) => theme.color.text || '#fff'};
   text-decoration: none;
   transition: color 0.3s ease;

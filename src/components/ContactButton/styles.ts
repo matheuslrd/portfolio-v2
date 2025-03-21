@@ -14,7 +14,7 @@ export const ButtonContainer = styled.a`
   
   &:hover {
     background: var(--accent-color-hover, #4920b5);
-    transform: translateY(-2px);
+    transform: translateY(-0.125rem);
   }
   
   svg {
@@ -34,8 +34,8 @@ export const ButtonContainer = styled.a`
     font-size: 0.9rem;
     
     svg {
-      width: 22px;
-      height: 22px;
+      width: 1.375rem;
+      height: 1.375rem;
     }
   }
   
@@ -44,8 +44,8 @@ export const ButtonContainer = styled.a`
     padding: 0.6rem 0;
     
     svg {
-      width: 20px;
-      height: 20px;
+      width: 1.25rem;
+      height: 1.25rem;
     }
   }
 `;

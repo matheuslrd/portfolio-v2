@@ -25,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  html {
+    font-size: 16px;
+  }
+
   html, body {
     height: auto;
     min-height: 100%;

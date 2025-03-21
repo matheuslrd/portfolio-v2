@@ -25,7 +25,7 @@ const Projects = styled.div`
     justify-content: center;
     gap: 2rem;
     width: 90%;
-    max-width: 1200px;
+    max-width: 75rem;
     margin-bottom: 2rem;
   }
 
@@ -35,19 +35,19 @@ const Projects = styled.div`
     padding: 2rem;
     font-size: 1rem;
     border-radius: 0.5rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.05);
     min-height: 16rem;
     flex: 1 0 calc(30% - 2rem);
-    max-width: 400px;
-    min-width: 280px;
+    max-width: 25rem;
+    min-width: 17.5rem;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
     transition: all 0.3s ease;
 
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px var(--accent-color-light);
+      transform: translateY(-0.3125rem);
+      box-shadow: 0 0.9375rem 1.875rem var(--accent-color-light);
     }
     
     .project-info-container {
@@ -91,7 +91,7 @@ const Projects = styled.div`
       
       &:hover {
         filter: brightness(0.9);
-        transform: translateY(-2px);
+        transform: translateY(-0.125rem);
       }
       
       svg {
@@ -116,7 +116,7 @@ const Projects = styled.div`
     font-weight: 500;
     transition: 0.2s all ease-out;
     padding: 0.5rem 1rem;
-    border: 2px solid var(--accent-color, #5929cf);
+    border: 0.125rem solid var(--accent-color, #5929cf);
     border-radius: 0.25rem;
     
     &:hover {
@@ -180,8 +180,8 @@ const Projects = styled.div`
       font-size: 0.9rem;
       
       svg {
-        width: 22px;
-        height: 22px;
+        width: 1.375rem;
+        height: 1.375rem;
       }
     }
   }
@@ -229,8 +229,8 @@ const Projects = styled.div`
         font-size: 0.85rem;
         
         svg {
-          width: 18px;
-          height: 18px;
+          width: 1.125rem;
+          height: 1.125rem;
         }
       }
     }

@@ -28,14 +28,14 @@ const Experience = styled.div`
 
   .Experience-Container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
     display: flex;
     gap: 2rem;
   }
 
   .Experience-Sidebar {
-    flex: 0 0 250px;
+    flex: 0 0 15.625rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -49,7 +49,7 @@ const Experience = styled.div`
     color: ${(props) => props.theme.color.text};
     font-size: 1rem;
     cursor: pointer;
-    border-left: 3px solid transparent;
+    border-left: 0.1875rem solid transparent;
     transition: all 0.3s ease;
 
     &:hover {
@@ -69,7 +69,7 @@ const Experience = styled.div`
     background: ${(props) => props.theme.color.primary};
     border-radius: 0.5rem;
     padding: 2rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
   }
 
@@ -103,7 +103,7 @@ const Experience = styled.div`
     }
 
     .Experience-Sidebar {
-      flex: 0 0 200px;
+      flex: 0 0 12.5rem;
     }
   }
 
@@ -130,12 +130,12 @@ const Experience = styled.div`
       padding-bottom: 0.5rem;
       
       &::-webkit-scrollbar {
-        height: 4px;
+        height: 0.25rem;
       }
       
       &::-webkit-scrollbar-thumb {
         background: var(--accent-color);
-        border-radius: 2px;
+        border-radius: 0.125rem;
       }
     }
 
@@ -143,7 +143,7 @@ const Experience = styled.div`
       flex: 0 0 auto;
       padding: 0.8rem 1.2rem;
       border-left: none;
-      border-bottom: 3px solid transparent;
+      border-bottom: 0.1875rem solid transparent;
       white-space: nowrap;
 
       &:hover,

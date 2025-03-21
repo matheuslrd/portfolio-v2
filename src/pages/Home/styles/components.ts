@@ -172,11 +172,11 @@ export const IllustrationContainer = styled.section`
   @media screen and (max-width: 768px) {
     display: none;
     margin-top: 1rem;
-    max-width: 300px;
+    max-width: 18.75rem;
   }
   
   @media screen and (max-width: 480px) {
-    max-width: 250px;
+    max-width: 15.625rem;
   }
 `;
 
