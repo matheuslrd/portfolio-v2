@@ -1,7 +1,7 @@
 import projects from '@data/projects.json';
 
-import StyledProjects from './styles/projects';
-import ProjectCard from './components/ProjectCard';
+import StyledProjects from './styles';
+import ProjectCard from '../../components/ProjectCard';
 
 function Projects() {
   return (

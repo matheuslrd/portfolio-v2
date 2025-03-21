@@ -21,8 +21,8 @@ export const SettingsButton = styled.button`
   border: none;
   cursor: pointer;
   color: ${({ theme }) => theme.color.text};
-  font-size: 20px;
-  padding: 8px;
+  font-size: 1.25rem;
+  padding: 0.5rem;
   transition: all 0.3s ease;
   border-radius: 50%;
   
@@ -36,8 +36,8 @@ export const SettingsButton = styled.button`
   }
   
   @media (max-width: 768px) {
-    padding: 10px;
-    font-size: 22px;
+    padding: 0.625rem;
+    font-size: 1.375rem;
   }
 `;
 
@@ -45,11 +45,11 @@ export const SettingsModal = styled.div<{ isDarkTheme: boolean }>`
   position: absolute;
   background-color: ${({ isDarkTheme }) => 
     isDarkTheme ? '#252528' : '#f5f5f7'};
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
   z-index: 1000;
-  top: 40.5885px;
+  top: 2.5368rem;
   right: 0;
   animation: fadeIn 0.2s ease-out;
   border: 1px solid ${({ isDarkTheme }) => 
@@ -58,19 +58,19 @@ export const SettingsModal = styled.div<{ isDarkTheme: boolean }>`
   @media (max-width: 768px) {
     position: fixed;
     top: auto;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1.25rem;
+    right: 1.25rem;
     max-width: calc(100% - 40px);
     width: auto;
-    min-width: 250px;
+    min-width: 15.625rem;
     z-index: 1200;
     max-height: 80vh;
     overflow-y: auto;
   }
   
   @media (max-width: 480px) {
-    bottom: 10px;
-    right: 10px;
+    bottom: 0.625rem;
+    right: 0.625rem;
     max-width: calc(100% - 20px);
     padding: 1.2rem;
   }
@@ -137,7 +137,7 @@ export const OptionLabel = styled.div`
 
 export const FontSizeGroup = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
   
   @media (max-width: 480px) {
     justify-content: center;
@@ -147,17 +147,17 @@ export const FontSizeGroup = styled.div`
 export const ColorOptionGroup = styled.div`
   display: flex;
   flex-wrap: nowrap;
-  gap: 10px;
+  gap: 0.625rem;
   justify-content: center;
   
   @media (max-width: 480px) {
-    gap: 8px;
+    gap: 0.5rem;
   }
 `;
 
 export const ColorOption = styled.button<{ color: string; isActive: boolean }>`
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 50%;
   background-color: ${({ color }) => accentColorMap[color]?.primary || color};
   border: 2px solid ${({ isActive, theme }) => 
@@ -169,7 +169,7 @@ export const ColorOption = styled.button<{ color: string; isActive: boolean }>`
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
-  margin: 0 2px;
+  margin: 0 0.125rem;
   
   &:hover {
     transform: scale(1.1);
@@ -187,8 +187,8 @@ export const ColorOption = styled.button<{ color: string; isActive: boolean }>`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 14px;
-      height: 14px;
+      width: 0.875rem;
+      height: 0.875rem;
       background: white;
       border-radius: 50%;
     }
@@ -198,8 +198,8 @@ export const ColorOption = styled.button<{ color: string; isActive: boolean }>`
 export const ToggleSwitch = styled.label`
   position: relative;
   display: inline-block;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
   
   input {
     opacity: 0;
@@ -218,15 +218,15 @@ export const ToggleSlider = styled.span<{ isOn: boolean }>`
   background-color: ${({ isOn }) => 
     isOn ? 'var(--accent-color, #5d2de2)' : 'rgba(0, 0, 0, 0.25)'};
   transition: .4s;
-  border-radius: 24px;
+  border-radius: 1.5rem;
   
   &:before {
     position: absolute;
     content: "";
-    height: 18px;
-    width: 18px;
-    left: 3px;
-    bottom: 3px;
+    height: 1.125rem;
+    width: 1.125rem;
+    left: 0.1875rem;
+    bottom: 0.1875rem;
     background-color: white;
     transition: .4s;
     border-radius: 50%;
@@ -241,7 +241,7 @@ export const ToggleContainer = styled.div`
   
   @media (max-width: 480px) {
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
   }
 `;
 
@@ -252,14 +252,14 @@ export const ToggleLabel = styled.span`
 
 export const DensityOptionGroup = styled.div`
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   width: 100%;
 `;
 
 export const DensityOption = styled.button<{ isActive: boolean }>`
   flex: 1;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
   border: 2px solid ${({ isActive, theme }) => 
     isActive ? 'var(--accent-color, #5d2de2)' : theme.color.text === '#fdfdfd' 
       ? 'rgba(255, 255, 255, 0.2)' 
@@ -286,9 +286,9 @@ export const DensityOption = styled.button<{ isActive: boolean }>`
 `;
 
 export const FontSizeOption = styled.button<{ isActive: boolean }>`
-  width: 45px;
-  height: 45px;
-  border-radius: 8px;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border-radius: 0.5rem;
   border: 2px solid ${({ isActive, theme }) => 
     isActive ? 'var(--accent-color, #5d2de2)' : theme.color.text === '#fdfdfd' 
       ? 'rgba(255, 255, 255, 0.2)' 
@@ -303,7 +303,7 @@ export const FontSizeOption = styled.button<{ isActive: boolean }>`
   cursor: pointer;
   font-weight: ${({ isActive }) => (isActive ? 'bold' : 'normal')};
   transition: all 0.2s ease;
-  margin: 0 2px;
+  margin: 0 0.125rem;
   
   &:hover {
     background-color: var(--accent-color-light, rgba(93, 45, 226, 0.1));

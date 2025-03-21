@@ -7,16 +7,16 @@ export const HeaderContainer = styled.header`
   left: 0;
   z-index: 1000;
   background-color: ${({ theme }) => theme.color.secundary || '#222'};  
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
 `;
 
 export const Navigation = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   transition: all 0.3s ease;
-  height: 60px;
+  height: 3.75rem;
   
   @media (max-width: 768px) {
     height: auto;
@@ -51,7 +51,7 @@ export const NavList = styled.ul<{ isOpen: boolean }>`
     
     & > li:nth-last-child(2), & > li:last-child {
       float: right;
-      margin-top: 10px;
+      margin-top: 0.625rem;
     }
   }
 `;
@@ -64,7 +64,7 @@ export const NavHeader = styled.div`
   
   @media (max-width: 768px) {
     width: 100%;
-    padding: 15px 0;
+    padding: 0.9375rem 0;
   }
 `;
 
@@ -73,20 +73,21 @@ export const Logo = styled.a`
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5rem;
+  cursor: pointer;
 `;
 
 export const NavItem = styled.li`
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0 15px;
+  padding: 0 0.9375rem;
   position: relative;
   
   @media (max-width: 768px) {
     height: auto;
     width: 100%;
-    padding: 15px 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.9375rem 0.625rem;
+    border-top: 0.0625rem solid rgba(255, 255, 255, 0.1);
     justify-content: flex-start;
     
     &:after {
@@ -97,7 +98,7 @@ export const NavItem = styled.li`
       display: inline-flex;
       width: auto;
       border-top: none;
-      padding: 10px;
+      padding: 0.625rem;
     }
   }
 `;
@@ -106,6 +107,7 @@ export const NavLink = styled.a`
   color: ${({ theme }) => theme.color.text || '#fff'};
   text-decoration: none;
   transition: color 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     color: var(--accent-color, #5d2de2);
@@ -115,7 +117,7 @@ export const NavLink = styled.a`
 export const HamburgerButton = styled.label`
   display: none;
   cursor: pointer;
-  padding: 10px;
+  padding: 0.625rem;
   
   @media (max-width: 768px) {
     display: block;
@@ -124,8 +126,8 @@ export const HamburgerButton = styled.label`
 
 export const HamburgerIcon = styled.span<{ isOpen?: boolean }>`
   display: block;
-  width: 25px;
-  height: 3px;
+  width: 1.5625rem;
+  height: 0.1875rem;
   background: ${({ isOpen, theme }) => isOpen ? 'transparent' : theme.color.text || '#fff'};
   position: relative;
   transition: all 0.3s ease;
@@ -134,20 +136,20 @@ export const HamburgerIcon = styled.span<{ isOpen?: boolean }>`
   &::after {
     content: '';
     display: block;
-    width: 25px;
-    height: 3px;
+    width: 1.5625rem;
+    height: 0.1875rem;
     background: ${({ theme }) => theme.color.text || '#fff'};
     position: absolute;
     transition: transform 0.3s ease;
   }
   
   &::before {
-    top: ${({ isOpen }) => isOpen ? '0' : '-8px'};
+    top: ${({ isOpen }) => isOpen ? '0' : '-0.5rem'};
     transform: ${({ isOpen }) => isOpen ? 'rotate(45deg)' : 'rotate(0)'};
   }
   
   &::after {
-    bottom: ${({ isOpen }) => isOpen ? '0' : '-8px'};
+    bottom: ${({ isOpen }) => isOpen ? '0' : '-0.5rem'};
     transform: ${({ isOpen }) => isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
   }
 `;

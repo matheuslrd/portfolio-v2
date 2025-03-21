@@ -16,7 +16,7 @@ const Skills = styled.div`
     display: flex;
     flex-flow: row nowrap;
     width: 90%;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
   }
 
@@ -76,8 +76,8 @@ const Skills = styled.div`
 
   .Skill-Card:hover {
     border-bottom: 0.25rem solid var(--accent-color, #5429cf);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.15);
   }
 
   @media screen and (max-width: 1024px) {

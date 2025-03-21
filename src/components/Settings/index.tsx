@@ -120,7 +120,7 @@ export default function Settings({ className }: SettingsProps) {
             <OptionLabel>
               <MdFormatSize
                 size={16}
-                style={{ marginRight: '6px', verticalAlign: 'middle' }}
+                style={{ marginRight: '0.375rem', verticalAlign: 'middle' }}
               />
               Tamanho da fonte
             </OptionLabel>
@@ -150,7 +150,7 @@ export default function Settings({ className }: SettingsProps) {
             <OptionLabel>
               <IoColorPaletteOutline
                 size={16}
-                style={{ marginRight: '6px', verticalAlign: 'middle' }}
+                style={{ marginRight: '0.375rem', verticalAlign: 'middle' }}
               />
               Cor de destaque
             </OptionLabel>
@@ -188,39 +188,12 @@ export default function Settings({ className }: SettingsProps) {
             </ColorOptionGroup>
           </OptionGroup>
 
-          {/* <OptionGroup>
-            <OptionLabel>
-              <FiLayout size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
-              Densidade do conteúdo
-            </OptionLabel>
-            <DensityOptionGroup>
-              <DensityOption 
-                isActive={contentDensity === 'compact'}
-                onClick={() => changeContentDensity('compact')}
-              >
-                Compacto
-              </DensityOption>
-              <DensityOption 
-                isActive={contentDensity === 'normal'}
-                onClick={() => changeContentDensity('normal')}
-              >
-                Normal
-              </DensityOption>
-              <DensityOption 
-                isActive={contentDensity === 'spacious'}
-                onClick={() => changeContentDensity('spacious')}
-              >
-                Espaçoso
-              </DensityOption>
-            </DensityOptionGroup>
-          </OptionGroup> */}
-
           <OptionGroup>
             <ToggleContainer>
               <ToggleLabel>
                 <MdAnimation
                   size={16}
-                  style={{ marginRight: '6px', verticalAlign: 'middle' }}
+                  style={{ marginRight: '0.375rem', verticalAlign: 'middle' }}
                 />
                 Animações
               </ToggleLabel>

@@ -3,7 +3,6 @@ import { WhatsappLogo, GithubLogo } from '@phosphor-icons/react';
 import { SEO } from '@components/SEO';
 import { GlobalContext } from '@context/MyProvider';
 import { IGlobalContext } from '@context/interfaces';
-import StyledHomePage from './styles/homePage';
 import {
   HomePageSection,
   MainContent,
@@ -14,7 +13,8 @@ import {
   ButtonsContact,
   IllustrationContainer,
   ArrowContainer,
-} from './styles/components';
+  StyledHomePage,
+} from './styles';
 import ContactButton from '@components/ContactButton';
 
 const Header = lazy(() => import('../../components/Header'));
@@ -38,7 +38,7 @@ function HomePage() {
               <SummaryAboutMe
                 style={{
                   contentVisibility: 'auto',
-                  containIntrinsicSize: '0 500px',
+                  containIntrinsicSize: '0 31.25rem',
                 }}
               >
                 <span>Olá, eu sou</span>

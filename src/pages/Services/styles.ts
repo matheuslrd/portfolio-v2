@@ -27,7 +27,7 @@ const Services = styled.div`
     justify-content: center;
     gap: 2rem;
     width: 90%;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto 2rem auto;
   }
 
@@ -38,13 +38,13 @@ const Services = styled.div`
     font-size: 1rem;
     padding: 1.5rem;
     flex: 1 0 calc(25% - 2rem);
-    min-width: 250px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    min-width: 15.625rem;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    max-width: 320px;
+    max-width: 20rem;
     position: relative;
     overflow: hidden;
     
@@ -67,8 +67,8 @@ const Services = styled.div`
   }
 
   .Service:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px var(--accent-color-light);
+    transform: translateY(-0.625rem);
+    box-shadow: 0 0.9375rem 1.875rem var(--accent-color-light);
   }
 
   .Icon-Service {
@@ -138,7 +138,7 @@ const Services = styled.div`
     .Service {
       flex: 1 0 calc(50% - 1rem);
       padding: 1.2rem;
-      min-width: 200px;
+      min-width: 12.5rem;
     }
 
     .Icon-Service {

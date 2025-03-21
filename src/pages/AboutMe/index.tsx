@@ -1,4 +1,4 @@
-import StyledAboutMe from './styles/aboutMe';
+import StyledAboutMe from './styles';
 import { FileHtml, FileJs, FileCss, Atom, LinkedinLogo } from '@phosphor-icons/react';
 
 function AboutMe() {

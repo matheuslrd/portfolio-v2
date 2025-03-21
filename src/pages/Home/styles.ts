@@ -1,5 +1,24 @@
 import styled, { keyframes } from 'styled-components';
 
+export const StyledHomePage = styled.div`
+  @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+  
+  .Title-Name {
+    font-family: Merienda, cursive;
+    font-size: 1.2rem;
+  }
+
+  .Light-Theme-Icon {
+    margin-left: 0.3rem;
+    margin-top: 0.1rem;
+  }
+
+  .Mouse-Seta {
+    color: var(--accent-color, #5d2de2);
+  }
+
+`;
+
 export const HomePageSection = styled.section`
   height: 100vh;
   padding-top: 3.625rem;
@@ -172,11 +191,11 @@ export const IllustrationContainer = styled.section`
   @media screen and (max-width: 768px) {
     display: none;
     margin-top: 1rem;
-    max-width: 300px;
+    max-width: 18.75rem;
   }
   
   @media screen and (max-width: 480px) {
-    max-width: 250px;
+    max-width: 15.625rem;
   }
 `;
 

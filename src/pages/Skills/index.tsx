@@ -1,8 +1,8 @@
 import { FaReact, FaJs, FaNode } from 'react-icons/fa';
 import { SiRedux, SiJest, SiStyledcomponents, SiDocker, SiGit } from 'react-icons/si';
 
-import StyledSkills from './styles/skills';
-import SkillCard from './components/SkillCard';
+import StyledSkills from './styles';
+import SkillCard from '../../components/SkillCard';
 import { BiLogoTypescript } from 'react-icons/bi';
 
 function Skills() {
