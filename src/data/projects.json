@@ -8,10 +8,10 @@
   },
   {
     "id": 2,
-    "title": "Your Wallet",
-    "description": "Carteira digital desenvolvido a fim de estudos para Trybe, para validar conhecimentos em React e Redux.",
-    "linkWebSite": "https://matheuslrd.github.io/yourwallet/",
-    "linkGitHub": "https://github.com/matheuslrd/yourwallet"
+    "title": "Oburgo",
+    "description": "Landing Page desenvolvida para a Oburgo, melhor hamburgueria de Gravataí.",
+    "linkWebSite": "https://oburgo.vercel.app",
+    "linkGitHub": "https://github.com/matheuslrd/oburgo-landing-page"
   },
   {
     "id": 3,
@@ -29,9 +29,9 @@
   },
   {
     "id": 5,
-    "title": "Three Meals",
-    "description": "Aplicativo de receitas, desenvolvido em React, utilizando React Router, React Icons, Hooks, Context.",
-    "linkWebSite": "https://three-meals.vercel.app/",
-    "linkGitHub": "https://github.com/matheuslrd/three-meals"
+    "title": "Weather API",
+    "description": "API de clima que consome uma API externa desenvolvida utilizando Node.js e Express.",
+    "linkWebSite": "https://github.com/matheuslrd/weather-api",
+    "linkGitHub": "https://github.com/matheuslrd/weather-api"
   }
 ]
